@@ -1,34 +1,34 @@
 import styled, {ThemeProvider} from "styled-components";
-import { variant, color, typography } from 'styled-system'
 import theme from "../styles/theme";
 import GlobalStyle from "../styles/GlobalStyle";
 
 import GoToTopOfPage from "../components/GoToTopOfPage";
 import Title from "../styles/Title";
-import BtnDark from "../styles/BtnDark";
-import BtnLight from "../styles/BtnLight";
+import Btn from "../styles/Btn";
+import Box from '../components/Box'
 
 export default function Home() {
-  return (
-      <ThemeProvider theme={theme}>
-        <GlobalStyle/>
-        <AppWrapp>
-            {/*<Title variant='title6'>dskjskdj</Title>*/}
-            <div color="colorIcon">test</div>
-            <BtnDark>sfkskdf</BtnDark>
-            <BtnLight>dsfdsffdsfdff</BtnLight>
-          {/*<Navigation/>*/}
-          {/*<Header/>*/}
-          {/*<Section1/>*/}
-          {/*<Section2/>*/}
-          {/*<Section3/>*/}
-          {/*<Section4/>*/}
-          {/*<Form/>*/}
-          {/*<Footer/>*/}
-          <GoToTopOfPage/>
-        </AppWrapp>
-      </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalStyle/>
+            <AppWrapp>
+                <Title variant='title1'>dskjskdj</Title>
+                <Title variant='title2' color="green" py="20px">dskjskdj</Title>
+                <Box color="colorIcon" p="100px">box</Box>
+                <Btn variant="light">sfkskdf</Btn>
+                <Btn variant="dark">dsfdsffdsfdff</Btn>
+                {/*<Navigation/>*/}
+                {/*<Header/>*/}
+                {/*<Section1/>*/}
+                {/*<Section2/>*/}
+                {/*<Section3/>*/}
+                {/*<Section4/>*/}
+                {/*<Form/>*/}
+                {/*<Footer/>*/}
+                <GoToTopOfPage/>
+            </AppWrapp>
+        </ThemeProvider>
+    );
 }
 
 const AppWrapp = styled.div`
