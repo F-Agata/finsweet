@@ -1,14 +1,15 @@
-import styled  from "styled-components";
-import { variant, color, space } from 'styled-system';
+import styled, { css }  from "styled-components";
+import { variant, color, space, typography } from 'styled-system';
 
 
 const Title = styled.p`
-    ${({ theme })=>`
-        fontWeight: ${theme.fonts.fontBold};
+    ${({ theme })=>css`
+        font-weight: ${theme.fonts.fontBold};
         color: ${theme.colors.colorSecondary};
     `};
     ${color};
     ${space};
+    ${typography};
     ${
       variant ({
           variants: {

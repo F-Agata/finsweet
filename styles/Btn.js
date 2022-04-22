@@ -12,7 +12,6 @@ const Btn = styled.button`
   
   ${({ theme }) => css`
     line-height: ${theme.lineHeight.lh6};
-    border-color: ${theme.colors.colorLight};
     font-size: ${theme.fontSizes.fs6};
   `};
 
@@ -23,31 +22,36 @@ const Btn = styled.button`
         light: {
           color: "colorPrimary",
           bg: "colorWhite",
-        },
-        dark: {
-          color: "colorWhite",
-          bg: "colorPrimary",
-        },
-      },
-    })
-  }
-
-  :hover {
-    ${({ theme }) => variant({
-      prop: 'variant',
-      variants: {
-          light: {
+          borderColor: `${theme.colors.colorLight}`,
+          '&:hover': {
             color: "colorWhite",
             bg: "colorPrimary",
             borderColor: `${theme.colors.colorPrimary}`,
           },
-          dark: {
+          '&:active': {
+            color: "colorWhite",
+            bg: "colorPrimary",
+            borderColor: `${theme.colors.colorPrimary}`,
+          },
+          
+        },
+        dark: {
+          color: "colorWhite",
+          bg: "colorPrimary",
+          borderColor: `${theme.colors.colorPrimary}`,
+          '&:hover': {
             color: "colorWhite",
             bg: "colorBtnHover",
+            borderColor: `${theme.colors.colorBtnHover}`,
+          },
+          '&:active': {
+            color: "colorWhite",
+            bg: "colorBtnHover",
+            borderColor: `${theme.colors.colorBtnHover}`,
           },
         },
-      })
-    }
+      },
+    })
   }
 `
 export default Btn
