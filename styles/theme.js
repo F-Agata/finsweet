@@ -1,3 +1,6 @@
+import breakpoints from './theme/breakpoints'
+import space from './theme/space'
+
 export default {
   colors: {
     colorPrimary: "#1D2130",
@@ -31,7 +34,7 @@ export default {
     lh4: "140%",
     lh5: "150%",
     lh6: "150%",
-
-  }
-
+  },
+  breakpoints,
+  space
 };
