@@ -16,11 +16,13 @@ const Navigation = () => {
             <Logo color={"dark"}/>
             <LinksPart/>
             <Btn variant="dark"> Free trial</Btn>
-
+            <Box display="flex" width="100%" height={{_: '200px', tablet: '400px'}} bg={{_: 'blue', tablet: 'red'}} mx={{_: 'xl', tablet: '2mg'}} >
+                test box
+            </Box>
 
         </BoxNavigation>
     );
-}
+};
 
 export default Navigation;
 
