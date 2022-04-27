@@ -8,6 +8,9 @@ const Btn = styled.button`
   padding: 16px 40px;
   text-align: center;
   border: solid 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   
   ${({ theme }) => css`
