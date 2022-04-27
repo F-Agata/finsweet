@@ -13,7 +13,7 @@ const Navigation = () => {
 
     return (
         <BoxNavigation >
-            <Logo />
+            <Logo color={"dark"}/>
             <LinksPart/>
             <Btn variant="dark"> Free trial</Btn>
 

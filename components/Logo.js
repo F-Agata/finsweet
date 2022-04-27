@@ -2,17 +2,20 @@ import React from "react";
 import styled , { css } from "styled-components";
 
 import Box from '../styles/Box'
-import LogoVector from '../public/LogoVector.svg'
+import LogoVectorDark from '../public/LogoVectorDark.svg'
+import LogoVectorLight from '../public/LogoVectorLight.svg'
 
 
 
-const Logo = () => {
+const Logo = ( {color} ) => {
     // useEffect(()=>{console.log(iconClosed)},[])
 
 
     return (
         <BoxLogo >
-            <LogoIcon src={LogoVector.src} alt={"logo"} />
+            {color === "dark" && <LogoIcon src={LogoVectorDark.src} alt={"logo"} />}
+            {color === "Light" && <LogoIcon src={LogoVectorLight.src} alt={"logo"} />}
+
         </BoxLogo>
     );
 };

@@ -2,9 +2,9 @@ import React  from "react";
 import styled, { css } from "styled-components";
 
 import Logo from "../Logo";
+import InputFooterPart from "./InputFooterPart"
+import OneColumn from "./OneColumn";
 
-
-import Btn from "../../styles/Btn";
 import Box from "../Box";
 import TitleAndText from "../../styles/TitleAndText";
 
@@ -17,7 +17,18 @@ const Footer = () => {
 
             <BoxGradient />
             <BoxBgPrimary>
-            <TitleAndTextBla variant={'title3'}>fsfffdsfsdffsdfdsfdfsdf</TitleAndTextBla>
+           <BoxTxt>
+               <BoxLinksFooter>
+                   <OneColumn/>
+               </BoxLinksFooter>
+               <BoxLogoSubscribeFooter>
+                   <Logo color={'Light'}/>
+                   <BoxSubscribe>
+                       <TitleAndText variant={'title5'} color={"colorWhite"} mt={32} mb={16}>Subscribe to our Newsletter</TitleAndText>
+                       <InputFooterPart/>
+                   </BoxSubscribe>
+               </BoxLogoSubscribeFooter>
+           </BoxTxt>
             </BoxBgPrimary>
         </BoxFooter>
     );
@@ -31,8 +42,10 @@ const BoxFooter = styled(Box)`
   top: 588px;
   overflow: hidden;
   width: 1440px;
- height: 500px;
+ min-height: 500px;
   background-color: transparent;
+  border-top: 1px solid;
+  border-color: ${props => props.theme.colors.colorBtnHover};
   
   //Effect: Drop shadow;
   //Radius: 4px;
@@ -53,19 +66,25 @@ const BoxGradient = styled(Box)`
   filter: blur(4px);
   radius: 4px;
   Offset: 0px, 4px;
-  //z-index: -2;
 `
 
 const BoxBgPrimary = styled(Box)`
   position: absolute;
   top: 117px;
-  //z-index: -1;
   width: 1440px;
-  height: 383px;
+  min-height: 383px;
   padding: 64px 80px 0px 80px;
   ${({ theme }) => css`
     background-color: ${theme.colors.colorPrimary};
   `};
+`
+
+const BoxTxt = styled(Box)`
+  border: greenyellow 2px solid;
+    width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  
 `
 
 const TitleAndTextBla = styled(TitleAndText)`
@@ -73,4 +92,15 @@ const TitleAndTextBla = styled(TitleAndText)`
 
   
   //border: greenyellow 2px solid;
+`
+
+const BoxLinksFooter = styled(Box)`
+    border: #0070f3 2px solid;
+`
+
+const BoxLogoSubscribeFooter = styled(Box)`
+  border: #0070f9 2px solid;
+`
+
+const BoxSubscribe = styled(Box)`
 `
