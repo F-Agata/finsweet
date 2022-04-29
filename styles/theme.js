@@ -9,6 +9,7 @@ export default {
     colorIcon: "#503AE7",
     colorBtnHover: "#313852",
     colorWhite: "#FFFFFF",
+    colorLightFooter: "#C4C4C4",
   },
   gradients: {
     gradientLabel: "linear-gradient(53.94deg, #373FFF 15.02%, #3ACAF8 82.83%);",

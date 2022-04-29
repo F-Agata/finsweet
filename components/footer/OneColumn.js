@@ -11,7 +11,7 @@ const OneColumn = () => {
     return (
         <BoxOneColumn>
             <TitleAndText variant={'title5'} color={"colorWhite"}>sdfdsf</TitleAndText>
-            <TitleAndText variant={'textSmall'} color={"colorWhite"}>dfdsfsdfsf</TitleAndText>
+            <TitleAndText variant={'textSmall'} color={"colorWhite"} opacity={'50%'}>dfdsfsdfsf</TitleAndText>
         </BoxOneColumn>
     );
 }
