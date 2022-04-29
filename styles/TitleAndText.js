@@ -3,6 +3,7 @@ import { variant, color, space, typography } from 'styled-system';
 
 
 const TitleAndText = styled.p`
+    font-family:  'Roboto', sans-serif;
     ${({ theme })=>css`
         color: ${theme.colors.colorPrimary};
     `};

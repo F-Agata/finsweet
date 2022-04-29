@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import Logo from '../Logo'
 
-import Box from '../Box'
+import Box from '../../styles/Box'
 import Btn from "../../styles/Btn";
 import LinksPart from "./LinksPart";
 
@@ -16,9 +16,9 @@ const Navigation = () => {
             <Logo color={"dark"}/>
             <LinksPart/>
             <Btn variant="dark"> Free trial</Btn>
-            <Box display="flex" width="100%" height={{_: '200px', tablet: '400px'}} bg={{_: 'blue', tablet: 'red'}} mx={{_: 'xl', tablet: '2mg'}} >
-                test box
-            </Box>
+            {/*<Box display="flex" width="100%" height={{_: '200px', tablet: '400px'}} bg={{_: 'colorSecondary', tablet: 'colorIcon'}} mx={{_: 'xl', tablet: '2mg'}} >*/}
+            {/*    test box*/}
+            {/*</Box>*/}
 
         </BoxNavigation>
     );
@@ -31,7 +31,8 @@ const BoxNavigation = styled(Box)`
  display: flex; 
   justify-content: space-between;
   align-items: center;
- width: 100%;
+ max-width: 1440px;
+  width: 100%;
  height: 70px;
  padding:  0 80px; 
   z-index: 100;
