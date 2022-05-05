@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 
 import Logo from '../Logo'
@@ -27,7 +27,11 @@ const Navigation = () => {
 export default Navigation;
 
 const BoxNavigation = styled(Box)`
-    //border: 2px solid red;
+    border: 2px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
  display: flex; 
   justify-content: space-between;
   align-items: center;
@@ -36,9 +40,10 @@ const BoxNavigation = styled(Box)`
  height: 70px;
  padding:  0 80px; 
   z-index: 100;
-  position: fixed;
-
+  
   ${({ theme }) => css`
     background-color: ${theme.colors.colorWhite};
   `};
+  
 `
+// p={{_: '34px 40px 34px 40px', tablet: '64px 80px 64px 80px', }}

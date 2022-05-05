@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { variant, space, position } from "styled-system";
+import { variant, space, position, layout } from "styled-system";
 
 const Btn = styled.button`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
@@ -20,6 +20,7 @@ const Btn = styled.button`
   
   ${space};
   ${position};
+  ${layout};
   
   ${({ theme }) =>
     variant({

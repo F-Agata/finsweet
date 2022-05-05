@@ -8,6 +8,7 @@ import Box from '../styles/Box'
 
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/footer/Footer";
+import StartPage from "../components/startPage/StartPage"
 
 export default function Home() {
     return (
@@ -20,9 +21,11 @@ export default function Home() {
                  bg={'colorWhite'}
                  boxShadow={'0px 4px 4px rgba(0, 0, 0, 0.25)'}
                  overflow={'hidden'}
+                 position={'relative'}
+                border={'orange 2px solid'}
             >
                 <Navigation/>
-                {/*<Header/>*/}
+                <StartPage/>
                 <Footer/>
                 <GoToTopOfPage/>
             </Box>

@@ -2,12 +2,9 @@ import React  from "react";
 import styled, { css } from "styled-components";
 
 import Btn from "../../styles/Btn";
-import TitleAndText from "../../styles/TitleAndText";
 import Box from "../../styles/Box";
 
 const InputFooterPart = () => {
-    // useEffect(()=>{console.log(iconClosed)},[])
-
 
     return (
         <Box display={'flex'} flexDirection={'row'} >
@@ -27,7 +24,7 @@ const InputFooterPart = () => {
                      type={"submit"}
                      ml={0}
                      mr={0}
-                     position={'absolute'}
+                     position={{_: '', tablet: 'absolute', }}
                      right={'0'}
                      zIndex={'2'}
                 >Subscribe</Btn>
@@ -42,14 +39,20 @@ const FormStyledFooter = styled.form`
   //border: crimson 2px solid;
   min-width: 360px;
   display: flex;
-  align-items: center; 
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+\`
 `
 
 const InputStyledFooter = styled.input`
-    width: 100%;
+    max-width: 90%;
     height: 60px;
-    padding: 16px 177px 16px 22px;
+    padding: 16px 22px 16px 22px;
     border-radius: 12px;
     border: 2px solid;
    
@@ -69,5 +72,9 @@ const InputStyledFooter = styled.input`
   }
   :active {
     //border-color: ${props => props.theme.colors.colorWhite};
+  }
+  @media (min-width: 768px) {
+    width: 100%;
+    padding: 16px 177px 16px 22px;
   }
     `
