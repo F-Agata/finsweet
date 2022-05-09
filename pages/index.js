@@ -17,12 +17,17 @@ export default function Home() {
             <Box maxWidth={1440}
                  minWidth={375}
                  minHeight={'100vh'}
+                 width={'100%'}
                  m={'0 auto'}
                  bg={'colorWhite'}
+                 // bg={'lightblue'}
                  boxShadow={'0px 4px 4px rgba(0, 0, 0, 0.25)'}
                  overflow={'hidden'}
+                 display={'flex'}
+                 flexDirection={'column'}
+                 // border={'orange 2px solid'}
                  position={'relative'}
-                border={'orange 2px solid'}
+
             >
                 <Navigation/>
                 <StartPage/>

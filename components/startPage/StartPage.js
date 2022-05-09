@@ -14,7 +14,7 @@ const StartPage = () => {
             // border={'orange 2px solid'}
             maxWidth={846}
             m={'0 auto'}
-            p={'300px 60px 0px 60px'}
+            p={{_: '150px 40px 0px 40px', tablet: '300px 80px 0px 80px', }}
             textAlign={'center'}
             display={'flex'}
             flexDirection={'column'}
@@ -23,10 +23,12 @@ const StartPage = () => {
             position={'relative'}
         >
             <BoxStyledGradient/>
-            <TitleAndText variant={'title1'} mb={34}>Are you ready to grow your business with us?</TitleAndText>
-            <TitleAndText variant={'textSmall'} mb={42} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
-            </TitleAndText>
-            <Btn variant={'dark'}  m={'0 auto'}>View Pricing</Btn>
+            <Box zIndex={'1'}>
+               <TitleAndText variant={'title1'} mb={34}>Are you ready to grow your business with us?</TitleAndText>
+               <TitleAndText variant={'textSmall'} mb={42} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+               </TitleAndText>
+               <Btn variant={'dark'}  m={'0 auto'}>View Pricing</Btn>
+            </Box>
         </Box>
     );
 }
@@ -35,14 +37,11 @@ export default StartPage;
 
 const BoxStyledGradient = styled(Box)`
   position: absolute;
-  top: -50%;
-  left: 70%;
+  top: 0%;
+  left: 60%;
   width: 510px;
   height: 510px;
-  ////margin-left: -269px;
-  //opacity:30%;
   border-radius:50%;
   background: ${props => props.theme.gradients.gradientBlur};
-  filter: blur(40px);
-  radius: 400px;
+  filter: blur(80px);
  `

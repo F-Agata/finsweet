@@ -9,25 +9,25 @@ import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
 const IconsFooterPart = () => {
 
     return (
-        <Box mt={5}
-             border={'orange 2px solid'}
+        <Box mt={15}
+             // border={'orange 2px solid'}
              display={'flex'}
              justifyContent={'space-between'}
-             alignItems={{_: 'space-between', tablet: 'center', }}
+             alignItems={{_: 'center', tabletL: 'center', }}
              width={'100%'}
              alignSelf={'flex-end'}
-             flexDirection={{_: 'column', tablet: 'row', }}
-
+             flexDirection={{_: 'column', tabletL: 'row', }}
              >
-            <Box width={{_: '100%', tablet: '37%', }}
+            <Box width={{_: '100%', tabletL: '33%', laptop: '35%' }}
                  bg={'colorWhite'}
                  opacity={"50%"}
-                 height={5} />
+                 height={1} />
             <Box
-                width={{_: '100%', tablet: '22%', }}
-                 display={'flex'}
+                width={{_: '100%', mobileL: '50%', tabletL: '30%', laptop: '25%' }}
+                p={{_: '4px 0px ',  tabletL: '0',  }}
+                display={'flex'}
                  justifyContent={'space-between'}
-                border={'red 2px solid'}
+                // border={'red 2px solid'}
             >
                 <TitleAndText fontSize={'12px'}
                               lineHeight={'18px'}
@@ -38,10 +38,10 @@ const IconsFooterPart = () => {
                 <StyledFaTwitter/>
                 <StyledFaInstagram/>
             </Box>
-            <Box width={{_: '100%', tablet: '37%', }}
+            <Box width={{_: '100%', tabletL: '33%', laptop: '35%' }}
                  bg={'colorWhite'}
                  opacity={"50%"}
-                 height={10} />
+                 height={1} />
         </Box>
     );
 }

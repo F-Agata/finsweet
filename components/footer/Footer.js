@@ -16,23 +16,28 @@ const Footer = () => {
 
 
     return (
-        <Box position={'absolute'}
-             bottom={0}
-             width={1440}
+        <Box
+             maxWidth={1440}
+             width={'100%'}
              minHeight={500}
              overflow={'hidden'}
              bg={'transparent'}
              borderTop={'1px solid '}
              borderColor={'colorLightFooter'}
+            position={'fixed'}
+            bottom={0}
+            mt={40}
+
         >
 
             <BoxStyledGradient/>
 
-            <Box position={'absolute'}
-                          top={117}
-                          maxWidth={1440}
+            <Box
+                position={'fixed'}
+                bottom={0}
+                maxWidth={1440}
                           width={'100%'}
-                          minHeight={383}
+                          minHeight={300}
                           p={{_: '34px 40px 34px 40px', tablet: '64px 80px 64px 80px', }}
                           bg={'colorPrimary'}
                           display={'flex'}
@@ -43,16 +48,28 @@ const Footer = () => {
                     display={'flex'}
                     justifyContent={'space-between'}
                     flexDirection={{_: 'column', tablet: 'row', }}
-                    border={'yellow 2px solid'}
+                    // border={'yellow 2px solid'}
+                    
                 >
                   <Box border={'green 2px solid'}
                        flexGrow={{_: '0', tablet: '1', }}
                   >
                     <OneColumn/>
                   </Box>
-                  <Box pt={{_: '20px', tablet: '0px', }} >
+                  <Box
+                      // border={'pink 2px solid'}
+                        display={'flex'}
+                        flexDirection={'column'}
+                        alignItems={{_: 'center', tablet: 'flex-start', }}
+                        pt={{_: '20px', tablet: '0', }}
+                  >
                     <Logo color={'Light'} />
-                    <Box >
+                    <Box
+                        // border={'purple 2px solid'}
+                         display={'flex'}
+                         flexDirection={'column'}
+                         alignItems={{_: 'center', tablet: 'flex-start', }}
+                    >
                        <TitleAndText variant={'title5'} color={"colorWhite"} mt={32} mb={16}>Subscribe to our Newsletter</TitleAndText>
                        <InputFooterPart/>
                     </Box>
@@ -68,17 +85,15 @@ export default Footer;
 
 const BoxStyledGradient = styled(Box)`
   //border: 2px solid grey;
+
     position: absolute;
-    top: 0px;
+  
+    top: 20px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 1977px;
     height: 1154px;
-    //margin-left: -269px;
-    opacity:30%;
-    border-radius:50%;
+    border-radius: 50%;
     background: ${props => props.theme.gradients.gradientBlur};
-    filter: blur(4px);
-    radius: 4px;
-    offset: 0px 4px;
-`
+    filter: blur(20px);
+  `

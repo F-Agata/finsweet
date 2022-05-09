@@ -18,13 +18,12 @@ const InputFooterPart = () => {
                               // value={values.email}
                               // onChange={handleChange}
                  >
-
                  </InputStyledFooter>
                 <Btn variant={'light'}
                      type={"submit"}
                      ml={0}
                      mr={0}
-                     position={{_: '', tablet: 'absolute', }}
+                     position={ 'absolute'}
                      right={'0'}
                      zIndex={'2'}
                 >Subscribe</Btn>
@@ -37,22 +36,17 @@ export default InputFooterPart;
 
 const FormStyledFooter = styled.form`
   //border: crimson 2px solid;
-  min-width: 360px;
+  width: 360px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   position: relative;
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-  }
-\`
 `
 
 const InputStyledFooter = styled.input`
-    max-width: 90%;
+    width: 100%;
     height: 60px;
-    padding: 16px 22px 16px 22px;
+    padding: 16px 177px 16px 22px;
     border-radius: 12px;
     border: 2px solid;
    
@@ -72,9 +66,5 @@ const InputStyledFooter = styled.input`
   }
   :active {
     //border-color: ${props => props.theme.colors.colorWhite};
-  }
-  @media (min-width: 768px) {
-    width: 100%;
-    padding: 16px 177px 16px 22px;
   }
     `
