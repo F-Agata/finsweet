@@ -12,7 +12,7 @@ import LinksPart from "./LinksPart";
 
 const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
 
-    const [smallNavIsOpen, setSmallNavIsOpen] = useState(false)
+    // const [smallNavIsOpen, setSmallNavIsOpen] = useState(false)
 
     // const modificationMenuSize = useMediaQuery({ query: `${props => props.theme.breakpoints.tablet} `})
 
@@ -28,26 +28,44 @@ const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
     ));
 
     return (
-        <Box position={'absolute'}
+        <Box position={'fixed'}
              top={0}
              left={0}
-             bg={'colorWhite'}
              width={'100%'}
-             // minHeight={'100vh'}
-             p={'40px'}
+             height={'100vh'}
+             zIndex={'999'}
         >
-            <Box display={'flex'}
+            <Box onClick={changeNav}
+                 position={'fixed'}
+                 top={0}
+                 left={0}
+                 bg={'colorWhite'}
+                 opacity={'80%'}
+                 width={'100%'}
+                 height={'100vh'}
+             />
+           <Box position={'fixed'}
+                top={0}
+                left={0}
+                bg={'colorWhite'}
+                width={'100%'}
+                p={'40px'}
+                borderBottom={'1px solid '}
+                borderColor={'colorLightFooter'}
+                >
+             <Box display={'flex'}
                  justifyContent={'space-between'}
                  alignItems={'center'}
                  pb={40}
              >
                 <Logo color={"dark"}/>
                 <StyledGrClose onClick={changeNav}/>
-            </Box>
-            <Box>
+             </Box>
+            <Box  pb={40}>
                 {menuItem}
             </Box>
-            <Btn variant="dark" onClick={changeNav}> Free trial</Btn>
+            <Btn variant="dark" onClick={changeNav} ml={0}> Free trial</Btn>
+        </Box>
         </Box>
     );
 };
@@ -60,7 +78,12 @@ const StyledGrClose = styled(GrClose)`
     color: ${theme.colors.colorPrimary};
     line-height: ${theme.lineHeight.lh4};
     font-size: ${theme.fontSizes.fs4};
+    font-weight: ${theme.fontWeights.fontBold};
+    transition: 0.3s;
   `};
+  :hover  {
+    transform: scale(1.3, 1.3);
+  }
 `
 const StyledNavigationLi = styled.li`
     //border: lightcoral 2px solid;
@@ -69,11 +92,12 @@ const StyledNavigationLi = styled.li`
   cursor: pointer;
   transition: 0.3s;
   :hover a {
-    color: ${(props) => props.theme.colors.colorSecondary};
-  }
-  :hover {
-    ::before {
-      bottom: -9px;
-    }
+    ${({ theme }) => css`
+    //color: ${theme.colors.colorSecondary};
+    font-weight: ${theme.fontWeights.fontBold}; 
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     
+  `};
+   }
   }
 `

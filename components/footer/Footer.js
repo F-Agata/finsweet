@@ -27,7 +27,6 @@ const Footer = () => {
             position={'fixed'}
             bottom={0}
             mt={40}
-
         >
 
             <BoxStyledGradient/>
@@ -85,10 +84,8 @@ export default Footer;
 
 const BoxStyledGradient = styled(Box)`
   //border: 2px solid grey;
-
     position: absolute;
-  
-    top: 20px;
+     top: 20px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 1977px;

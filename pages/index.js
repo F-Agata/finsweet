@@ -12,8 +12,9 @@ import StartPage from "../components/startPage/StartPage"
 
 export default function Home() {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle/>
+        <>
+        {/*<ThemeProvider theme={theme}>*/}
+             {/*<GlobalStyle/>*/}
             <Box maxWidth={1440}
                  minWidth={375}
                  minHeight={'100vh'}
@@ -29,12 +30,13 @@ export default function Home() {
                  position={'relative'}
 
             >
-                <Navigation/>
+                {/*<Navigation/>*/}
                 <StartPage/>
-                <Footer/>
+                {/*<Footer/>*/}
                 <GoToTopOfPage/>
             </Box>
-        </ThemeProvider>
+        {/*</ThemeProvider>*/}
+        </>
     );
 }
 

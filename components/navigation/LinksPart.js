@@ -7,30 +7,49 @@ import Box from "../../styles/Box";
 
 
 const LinksPart = ( {menuItems} ) => {
-    useEffect(()=>{console.log(menuItems.menuItems)},[])
-
 
     const menuItem = menuItems.map((item) => (
         <StyledNavigationLi key={item.id}>
-            <a href={`#${item.id}`}>{item.name}</a>
+            <a href={`${item.id}`}>{item.name}</a>
             {/*<NavigationLink href={`#${item.id}`} onClick={changeMenu} >{item.name}</NavigationLink>*/}
         </StyledNavigationLi>
     ));
 
     return (
-        <Box >
-            <ul>
+        <Box
+            border={'orange 2px solid'}
+                flexGrow={'1'}
+            // justifySelfu={'flex-end'}
+        >
+            <StyledNavigationUl >
                 {menuItem}
-            </ul>
+            </StyledNavigationUl>
         </Box>
     );
 }
 
 export default LinksPart;
 
-
-
-const StyledNavigationLi = styled.li`
-    border: greenyellow 2px solid;
+const StyledNavigationUl = styled.ul`
+  //border: olivedrab 2px solid;
+  display: flex;
+  justify-content: flex-end;
+  @media (min-width: 1024px) {
+   justify-content: space-between;
+  }
 `
 
+const StyledNavigationLi = styled.li`
+  //border: blueviolet 2px solid;
+padding-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+  :hover a {
+    ${({ theme }) => css`
+    font-weight: ${theme.fontWeights.fontBold}; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  `};
+  }
+}
+`

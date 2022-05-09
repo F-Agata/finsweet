@@ -63,6 +63,9 @@ const BoxNavigation = styled(Box)`
   @media (min-width: 768px) {
     padding:  0 80px;
   }
+  //@media (min-width: 1024px) {
+  //  padding:  0 80px;
+  //}
 `
 
 const StyledFaBars = styled(FaBars)`
