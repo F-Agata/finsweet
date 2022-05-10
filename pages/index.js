@@ -8,7 +8,7 @@ import Box from '../styles/Box'
 
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/footer/Footer";
-import Home from "./home"
+import {default as HomeContent} from "./home"
 
 export default function Home() {
     return (
@@ -31,7 +31,7 @@ export default function Home() {
 
             >
                 {/*<Navigation/>*/}
-                <Home/>
+                <HomeContent/>
                 {/*<Footer/>*/}
                 <GoToTopOfPage/>
             </Box>
