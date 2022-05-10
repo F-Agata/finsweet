@@ -1,9 +1,9 @@
 const menuItems = [
     { name: "Home", id: "/" },
-    { name: "Products", id: "Products" },
-    { name: "Pricing", id: "Pricing" },
-    { name: "About Us", id: "About Us" },
-    { name: "Blog", id: "Blog" },
+    { name: "Products", id: "products" },
+    { name: "Pricing", id: "pricing" },
+    { name: "About Us", id: "aboutUs" },
+    { name: "Blog", id: "blog" },
     { name: "Contact", id: "contact" },
 ];
 

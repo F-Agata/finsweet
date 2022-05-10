@@ -30,10 +30,9 @@ export default function Home() {
                  position={'relative'}
 
             >
-                {/*<Navigation/>*/}
+
                 <HomeContent/>
-                {/*<Footer/>*/}
-                <GoToTopOfPage/>
+
             </Box>
         {/*</ThemeProvider>*/}
         </>

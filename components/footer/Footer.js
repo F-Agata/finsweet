@@ -1,6 +1,8 @@
 import React  from "react";
 import styled, { css } from "styled-components";
 
+import footerItems from "./footerItems";
+
 import Logo from "../Logo";
 import IconsFooterPart from "./IconsFooterPart";
 import InputFooterPart from "./InputFooterPart"
@@ -46,17 +48,14 @@ const Footer = () => {
                 <Box width={'100%'}
                     display={'flex'}
                     justifyContent={'space-between'}
-                    flexDirection={{_: 'column', tablet: 'row', }}
+                    flexDirection={{_: 'column', tabletL: 'row', }}
                     // border={'yellow 2px solid'}
-                    
                 >
-                  <Box border={'green 2px solid'}
-                       flexGrow={{_: '0', tablet: '1', }}
-                  >
-                    <OneColumn/>
-                  </Box>
+
+                  <OneColumn footerItems={footerItems}/>
+
                   <Box
-                      // border={'pink 2px solid'}
+                      border={'pink 2px solid'}
                         display={'flex'}
                         flexDirection={'column'}
                         alignItems={{_: 'center', tablet: 'flex-start', }}

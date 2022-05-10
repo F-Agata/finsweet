@@ -10,7 +10,7 @@ const Contact = () => {
 
     return (
         <Box>
-            <TitleAndText>Contact </TitleAndText>
+            <TitleAndText mt={300} color={'red'}>Contact </TitleAndText>
 
 
 

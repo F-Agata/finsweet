@@ -8,26 +8,24 @@ import Logo from '../Logo'
 
 import Box from '../../styles/Box'
 import Btn from "../../styles/Btn";
-import LinksPart from "./LinksPart";
+import Link from "../../styles/Link";
+import TitleAndText from "../../styles/TitleAndText";
 
 const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
 
-    // const [smallNavIsOpen, setSmallNavIsOpen] = useState(false)
+       // const modificationMenuSize = useMediaQuery({ query: `${props => props.theme.breakpoints.tablet} `})
 
-    // const modificationMenuSize = useMediaQuery({ query: `${props => props.theme.breakpoints.tablet} `})
 
-    // const changeNav = () => {
-    //     setSmallNavIsOpen(!smallNavIsOpen)
-    // }
 
     const menuItem = menuItems.map((item) => (
         <StyledNavigationLi key={item.id}>
-            <a href={`#${item.id}`} onClick={changeNav}>{item.name}</a>
-            {/*<NavigationLink href={`#${item.id}`} onClick={changeMenu} >{item.name}</NavigationLink>*/}
+           <Link href={`/${item.id}`} onClick={changeNav}>
+                <TitleAndText variant={'textSmall'}> {item.name}</TitleAndText>
+            </Link>
         </StyledNavigationLi>
     ));
 
-    return (
+      return (
         <Box position={'fixed'}
              top={0}
              left={0}
@@ -61,11 +59,14 @@ const NavSmall = ( {menuItems, setSmallNavIsOpen, changeNav} ) => {
                 <Logo color={"dark"}/>
                 <StyledGrClose onClick={changeNav}/>
              </Box>
-            <Box  pb={40}>
+
+            <StyledNavigationUl>
                 {menuItem}
-            </Box>
-            <Btn variant="dark" onClick={changeNav} ml={0}> Free trial</Btn>
-        </Box>
+            </StyledNavigationUl>
+            <Link href={`/freeTrial`}>
+                <Btn variant="dark" onClick={changeNav} ml={0}> Free trial</Btn>
+            </Link>
+           </Box>
         </Box>
     );
 };
@@ -85,13 +86,22 @@ const StyledGrClose = styled(GrClose)`
     transform: scale(1.3, 1.3);
   }
 `
+
+const StyledNavigationUl = styled.ul`
+  //border: green 2px solid;
+    padding-bottom: 40px;
+  //text-decoration: none;
+`
+
 const StyledNavigationLi = styled.li`
     //border: lightcoral 2px solid;
     padding: 20px 0;
-   text-decoration: none;
+   //text-decoration: none;
+  list-style: none;
   cursor: pointer;
   transition: 0.3s;
-  :hover a {
+   :hover p {
+    //display: inline;
     ${({ theme }) => css`
     //color: ${theme.colors.colorSecondary};
     font-weight: ${theme.fontWeights.fontBold}; 

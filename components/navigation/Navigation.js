@@ -2,9 +2,7 @@ import React, {useState, useEffect} from "react";
 import styled, { css } from "styled-components";
 import { useMediaQuery } from 'react-responsive'
 import {FaBars} from "react-icons/fa";
-import {GrClose} from "react-icons/gr";
 import Box from '../../styles/Box'
-import Btn from "../../styles/Btn";
 import Logo from '../Logo'
 import menuItems from './menuItems'
 import LinksPart from "./LinksPart";
@@ -16,15 +14,10 @@ const Navigation = () => {
 
     // const modificationMenuSize = useMediaQuery({ query: `${props => props.theme.breakpoints.tablet} `})
     const modificationMenuSize = useMediaQuery({ query: '(min-width: 768px)'})
-    const addBtn = useMediaQuery({ query: '(min-width: 1024px)'})
 
     const changeNav = () => {
         setSmallNavIsOpen(!smallNavIsOpen)
             }
-
-    // useEffect(() => {
-    //     console.log('smallNavIsOpen', smallNavIsOpen)
-    // }, [smallNavIsOpen])
 
     return (
         <BoxNavigation >
@@ -36,9 +29,6 @@ const Navigation = () => {
                           setSmallNavIsOpen={setSmallNavIsOpen}
                           changeNav={changeNav}
                 /> : null}
-
-            {addBtn &&  <Btn variant="dark"> Free trial</Btn>}
-
         </BoxNavigation>
     );
 }
@@ -63,13 +53,9 @@ const BoxNavigation = styled(Box)`
   @media (min-width: 768px) {
     padding:  0 80px;
   }
-  //@media (min-width: 1024px) {
-  //  padding:  0 80px;
-  //}
 `
 
 const StyledFaBars = styled(FaBars)`
-  
   ${({ theme }) => css`
     background-color: ${theme.colors.colorWhite};
     color: ${theme.colors.colorPrimary};

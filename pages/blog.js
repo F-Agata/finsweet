@@ -10,7 +10,7 @@ const Blog = () => {
 
     return (
         <Box>
-            <TitleAndText>Blog </TitleAndText>
+            <TitleAndText mt={300} >Blog </TitleAndText>
 
 
 

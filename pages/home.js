@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import TitleAndText from "../styles/TitleAndText";
 import Box from "../styles/Box";
 import Btn from "../styles/Btn";
+import Link from "../styles/Link"
 
 
 const Home = () => {
@@ -27,7 +28,9 @@ const Home = () => {
                <TitleAndText variant={'title1'} mb={34}>Are you ready to grow your business with us?</TitleAndText>
                <TitleAndText variant={'textSmall'} mb={42} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
                </TitleAndText>
-               <Btn variant={'dark'}  m={'0 auto'}>View Pricing</Btn>
+               <Link href={`/pricing`}>
+                   <Btn variant={'dark'}  m={'0 auto'}>View Pricing</Btn>
+               </Link>
             </Box>
         </Box>
     );
