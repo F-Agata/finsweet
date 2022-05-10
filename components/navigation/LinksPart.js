@@ -1,16 +1,21 @@
-import  Link  from 'next/link';
+
 import styled, { css } from "styled-components";
 import React, {useState, useEffect} from "react";
 
 
 import Box from "../../styles/Box";
+import Link from "../../styles/Link";
+import TitleAndText from "../../styles/TitleAndText";
 
 
 const LinksPart = ( {menuItems} ) => {
 
     const menuItem = menuItems.map((item) => (
         <StyledNavigationLi key={item.id}>
-            <a href={`${item.id}`}>{item.name}</a>
+            <Link href={`${item.id}`}>
+                <TitleAndText variant={'textSmall'}> {item.name}</TitleAndText>
+            </Link>
+            {/*<a href={`${item.id}`}>{item.name}</a>*/}
             {/*<NavigationLink href={`#${item.id}`} onClick={changeMenu} >{item.name}</NavigationLink>*/}
         </StyledNavigationLi>
     ));

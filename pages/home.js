@@ -1,11 +1,11 @@
 import React  from "react";
 import styled, { css } from "styled-components";
-import TitleAndText from "../../styles/TitleAndText";
-import Box from "../../styles/Box";
-import Btn from "../../styles/Btn";
+import TitleAndText from "../styles/TitleAndText";
+import Box from "../styles/Box";
+import Btn from "../styles/Btn";
 
 
-const StartPage = () => {
+const Home = () => {
     // useEffect(()=>{console.log(iconClosed)},[])
 
 
@@ -33,7 +33,7 @@ const StartPage = () => {
     );
 }
 
-export default StartPage;
+export default Home;
 
 const BoxStyledGradient = styled(Box)`
   position: absolute;
