@@ -6,10 +6,14 @@ import Box from "../../styles/Box";
 
 const InputFooterPart = () => {
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
     return (
-        <Box display={'flex'} flexDirection={'row'} >
+
             <FormStyledFooter
-                // onSubmit={handleSubmit}
+                onSubmit={handleSubmit}
                 noValidate>
                  <InputStyledFooter placeholder={"Enter your Email"}
                               type={"email"}
@@ -19,16 +23,16 @@ const InputFooterPart = () => {
                               // onChange={handleChange}
                  >
                  </InputStyledFooter>
-                <Btn variant={'light'}
-                     type={"submit"}
-                     ml={0}
-                     mr={0}
-                     position={ 'absolute'}
-                     right={'0'}
-                     zIndex={'2'}
+                <Btn  type={"submit"}
+                      variant={'light'}
+                      ml={0}
+                      mr={0}
+                      position={ 'absolute'}
+                      right={'0'}
+                      zIndex={'2'}
                 >Subscribe</Btn>
             </FormStyledFooter>
-        </Box>
+
     );
 }
 
@@ -41,6 +45,9 @@ const FormStyledFooter = styled.form`
   flex-direction: row;
   align-items: center;
   position: relative;
+  @media (min-width: 768px) {
+    width: 450px;
+  }
 `
 
 const InputStyledFooter = styled.input`
@@ -49,7 +56,6 @@ const InputStyledFooter = styled.input`
     padding: 16px 177px 16px 22px;
     border-radius: 12px;
     border: 2px solid;
-   
     ${({ theme }) => css`
     font-size: ${theme.fontSizes.fs6};
     font-weight: ${theme.fontWeights.fontRegular};

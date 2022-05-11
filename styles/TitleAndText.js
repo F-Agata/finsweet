@@ -54,12 +54,6 @@ const TitleAndText = styled.p`
                 lineHeight: "lh5",
                 fontWeight: "fontRegular"
             },
-              textGradient: {
-                fontSize: "fs4",
-                lineHeight: "lh3",
-                fontWeight: "fontBold",
-                color: "gradientLabel"
-            },
           }
       })
     };

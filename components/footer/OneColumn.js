@@ -30,14 +30,16 @@ export default OneColumn;
 
 const BoxOneColumn = styled(Box)`
   flex-grow: 1;
-   //border: 2px solid pink;
+   //border: 2px solid blue;
     display: flex;
     flex-direction: column;
    align-items: center;
+  padding-top: 20px;
     @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+      padding-top: 0px;
   }
   @media (min-width: 1024px) {
      max-width: 60%;

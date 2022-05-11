@@ -15,7 +15,7 @@ const Home = () => {
             // border={'orange 2px solid'}
             maxWidth={846}
             m={'0 auto'}
-            p={{_: '150px 40px 0px 40px', tablet: '300px 80px 0px 80px', }}
+            p={{_: '150px 40px 40px 40px', tablet: '300px 80px 40px 80px', }}
             textAlign={'center'}
             display={'flex'}
             flexDirection={'column'}
@@ -25,6 +25,9 @@ const Home = () => {
         >
             <BoxStyledGradient/>
             <Box zIndex={'1'}>
+                <TitleAndText variant={'title1'} mb={34}>The Best Software to Grow your Sales and Services</TitleAndText>
+                <TitleAndText variant={'textLarge'} mb={42} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                </TitleAndText>
                <TitleAndText variant={'title1'} mb={34}>Are you ready to grow your business with us?</TitleAndText>
                <TitleAndText variant={'textSmall'} mb={42} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
                </TitleAndText>

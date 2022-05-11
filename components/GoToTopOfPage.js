@@ -51,7 +51,7 @@ const WrappGoToTopOfPage = styled.div`
   cursor: pointer;
   z-index: 10;
   overflow: hidden;
-  background-color: transparent;
+  background-color: ${(props) => props.theme.colors.colorWhite};
 `;
 
 const BackgraundButtonArrow = styled.div`

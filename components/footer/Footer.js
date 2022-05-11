@@ -1,5 +1,6 @@
 import React  from "react";
 import styled, { css } from "styled-components";
+import { useMediaQuery } from 'react-responsive'
 
 import footerItems from "./footerItems";
 
@@ -12,63 +13,64 @@ import Box from '../../styles/Box'
 import TitleAndText from "../../styles/TitleAndText";
 
 
-
 const Footer = () => {
-    // useEffect(()=>{console.log(iconClosed)},[])
 
+    const modificationOrderFooter = useMediaQuery({ query: '(min-width: 768px)'})
 
     return (
         <Box
              maxWidth={1440}
              width={'100%'}
-             minHeight={500}
+             justifySelf={'flex-end'}
              overflow={'hidden'}
              bg={'transparent'}
              borderTop={'1px solid '}
              borderColor={'colorLightFooter'}
-            position={'fixed'}
-            bottom={0}
-            mt={40}
+             position={'relative'}
+             pt={140}
+             display={'flex'}
+             flexDirection={'column'}
         >
-
             <BoxStyledGradient/>
 
-            <Box
-                position={'fixed'}
-                bottom={0}
-                maxWidth={1440}
+            <Box          maxWidth={1440}
                           width={'100%'}
-                          minHeight={300}
                           p={{_: '34px 40px 34px 40px', tablet: '64px 80px 64px 80px', }}
                           bg={'colorPrimary'}
                           display={'flex'}
                           flexDirection={'column'}
                           justifyContent={'space-between'}
+                          zIndex={2}
             >
                 <Box width={'100%'}
                     display={'flex'}
                     justifyContent={'space-between'}
                     flexDirection={{_: 'column', tabletL: 'row', }}
                     // border={'yellow 2px solid'}
+                    // alignItems={'center'}
                 >
+                    {!modificationOrderFooter &&   <Box  alignSelf={'center'}>
+                        <Logo color={'Light'}/>
+                    </Box>}
 
                   <OneColumn footerItems={footerItems}/>
 
                   <Box
-                      border={'pink 2px solid'}
+                      // border={'pink 2px solid'}
                         display={'flex'}
                         flexDirection={'column'}
                         alignItems={{_: 'center', tablet: 'flex-start', }}
                         pt={{_: '20px', tablet: '0', }}
+
                   >
-                    <Logo color={'Light'} />
+                      {modificationOrderFooter &&   <Logo color={'Light'} />}
                     <Box
                         // border={'purple 2px solid'}
                          display={'flex'}
                          flexDirection={'column'}
                          alignItems={{_: 'center', tablet: 'flex-start', }}
                     >
-                       <TitleAndText variant={'title5'} color={"colorWhite"} mt={32} mb={16}>Subscribe to our Newsletter</TitleAndText>
+                       <TitleAndText variant={'title5'} color={"colorWhite"} mt={{_: '0px', tablet: '32px', }} mb={16}>Subscribe to our Newsletter</TitleAndText>
                        <InputFooterPart/>
                     </Box>
                    </Box>
@@ -92,4 +94,5 @@ const BoxStyledGradient = styled(Box)`
     border-radius: 50%;
     background: ${props => props.theme.gradients.gradientBlur};
     filter: blur(20px);
+    
   `
