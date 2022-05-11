@@ -2,7 +2,6 @@ import React  from "react";
 import styled, { css } from "styled-components";
 
 import Btn from "../../styles/Btn";
-import Box from "../../styles/Box";
 
 const InputFooterPart = () => {
 

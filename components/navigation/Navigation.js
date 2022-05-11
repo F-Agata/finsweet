@@ -50,9 +50,9 @@ const BoxNavigation = styled(Box)`
   ${({ theme }) => css`
     background-color: ${theme.colors.colorWhite};
   `};
-  @media (min-width: 768px) {
-    padding:  0 80px;
-  }
+  //@media (min-width: 768px) {
+  //  padding:  0 40px;
+  //}
 `
 
 const StyledFaBars = styled(FaBars)`

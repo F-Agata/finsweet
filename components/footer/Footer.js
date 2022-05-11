@@ -19,6 +19,7 @@ const Footer = () => {
 
     return (
         <Box
+            // border={'blue 2px solid'}
              maxWidth={1440}
              width={'100%'}
              justifySelf={'flex-end'}
@@ -47,11 +48,11 @@ const Footer = () => {
                     justifyContent={'space-between'}
                     flexDirection={{_: 'column', tabletL: 'row', }}
                     // border={'yellow 2px solid'}
-                    // alignItems={'center'}
                 >
                     {!modificationOrderFooter &&   <Box  alignSelf={'center'}>
-                        <Logo color={'Light'}/>
-                    </Box>}
+                                                         <Logo color={'Light'}/>
+                                                   </Box>
+                    }
 
                   <OneColumn footerItems={footerItems}/>
 
@@ -61,7 +62,6 @@ const Footer = () => {
                         flexDirection={'column'}
                         alignItems={{_: 'center', tablet: 'flex-start', }}
                         pt={{_: '20px', tablet: '0', }}
-
                   >
                       {modificationOrderFooter &&   <Logo color={'Light'} />}
                     <Box
