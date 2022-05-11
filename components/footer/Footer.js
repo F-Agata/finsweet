@@ -11,6 +11,7 @@ import OneColumn from "./OneColumn";
 
 import Box from '../../styles/Box'
 import TitleAndText from "../../styles/TitleAndText";
+import Link from "../../styles/Link";
 
 
 const Footer = () => {
@@ -49,8 +50,11 @@ const Footer = () => {
                     flexDirection={{_: 'column', tabletL: 'row', }}
                     // border={'yellow 2px solid'}
                 >
-                    {!modificationOrderFooter &&   <Box  alignSelf={'center'}>
-                                                         <Logo color={'Light'}/>
+                    {!modificationOrderFooter &&   <Box  alignSelf={'center'}
+                                                         mb={20}>
+                                                        <Link href={`/`}>
+                                                            <Logo color={"light"}/>
+                                                        </Link>
                                                    </Box>
                     }
 
@@ -63,7 +67,7 @@ const Footer = () => {
                         alignItems={{_: 'center', tablet: 'flex-start', }}
                         pt={{_: '20px', tablet: '0', }}
                   >
-                      {modificationOrderFooter &&   <Logo color={'Light'} />}
+                      {modificationOrderFooter &&   <Link href={`/`}><Logo color={"light"}/></Link>}
                     <Box
                         // border={'purple 2px solid'}
                          display={'flex'}

@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { useMediaQuery } from 'react-responsive'
 import {FaBars} from "react-icons/fa";
 import Box from '../../styles/Box'
+import Link from "../../styles/Link";
 import Logo from '../Logo'
 import menuItems from './menuItems'
 import LinksPart from "./LinksPart";
@@ -21,7 +22,7 @@ const Navigation = () => {
 
     return (
         <BoxNavigation >
-            <Logo color={"dark"}/>
+            <Link href={`/`}><Logo color={"dark"}/></Link>
             {!modificationMenuSize && <StyledFaBars onClick={changeNav}/>}
             {modificationMenuSize && <LinksPart menuItems={menuItems}/>}
             {!modificationMenuSize && smallNavIsOpen  ?

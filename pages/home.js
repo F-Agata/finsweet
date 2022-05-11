@@ -33,7 +33,7 @@ const Home = () => {
                  alignItems={'center'}>
                 <Box
                     maxWidth={846}
-                    p={{_: '0px 40px ', tablet: '0px 80px', }}
+                    p={{_: '0px 40px ', tablet: '0px 60px', }}
                     display={'flex'}
                     flexDirection={'column'}
                     justifyContent={'center'}
@@ -45,13 +45,13 @@ const Home = () => {
                     <InputHome/>
                 </Box>
                 <Box mb={42}
-                     p={{_: '0px 40px ', tablet: '0px 80px', }}
+                     p={{_: '0px 40px ', tablet: '0px 40px', }}
                 >
                     <StyledImgHeader src={imgHeader.src} alt={"Header"} />
                 </Box>
                 <Box
                     maxWidth={846}
-                    p={{_: '0px 40px ', tablet: '0px 80px', }}
+                    p={{_: '0px 40px ', tablet: '0px 60px', }}
                     display={'flex'}
                     flexDirection={'column'}
                     justifyContent={'center'}

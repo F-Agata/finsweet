@@ -47,7 +47,7 @@ const WrappGoToTopOfPage = styled.div`
   position: fixed;
   bottom: 30px;
   right: 30px;
-  border: 1px solid ${(props) => props.theme.colors.colorSecondary};
+  border: 1px solid ${(props) => props.theme.colors.colorIcon};
   cursor: pointer;
   z-index: 10;
   overflow: hidden;

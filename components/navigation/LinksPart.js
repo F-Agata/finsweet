@@ -51,14 +51,26 @@ const StyledNavigationUl = styled.ul`
 const StyledNavigationLi = styled.li`
   //border: blueviolet 2px solid;
   list-style: none;
-padding-left: 20px;
+margin-left: 10px;
+  padding: 0 10px;
    cursor: pointer;
   transition: 0.3s;
-  :hover p {
+  :hover  {
     ${({ theme }) => css`
     font-weight: ${theme.fontWeights.fontBold}; 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   `};
   }
+  :active {
+    ${({ theme }) => css`
+    font-weight: ${theme.fontWeights.fontBold}; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  `};
+    :focus {
+      ${({ theme }) => css`
+    font-weight: ${theme.fontWeights.fontBold}; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  `};
+    }
 }
 `

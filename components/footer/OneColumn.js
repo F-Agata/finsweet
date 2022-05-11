@@ -9,7 +9,7 @@ const OneColumn = ( {footerItems} ) => {
 
     const footerItem = footerItems.map((item) => (
         <Box key={item.title}
-             // border={'blue 2px solid'}
+             // border={'olive 2px solid'}
              pb={{_: '20px', tabletL: '0px', }}
              pr={{_: '0px', tabletL: '26px', }}
              textAlign={{_: 'center', tablet: 'left', }}
@@ -39,7 +39,7 @@ const BoxOneColumn = styled(Box)`
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-      padding-top: 0px;
+    padding-top: 0px;
   }
   @media (min-width: 1024px) {
      max-width: 60%;

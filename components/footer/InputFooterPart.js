@@ -2,6 +2,7 @@ import React  from "react";
 import styled, { css } from "styled-components";
 
 import Btn from "../../styles/Btn";
+import Box from "../../styles/Box";
 
 const InputFooterPart = () => {
 
@@ -39,17 +40,26 @@ export default InputFooterPart;
 
 const FormStyledFooter = styled.form`
   //border: crimson 2px solid;
-  width: 360px;
+  flex-grow: 1;
+  //min-width: 360px;
+  //max-width: 450px;
+width: 360px;
   display: flex;
   flex-direction: row;
   align-items: center;
   position: relative;
+  margin-top: 20px;
   @media (min-width: 768px) {
     width: 450px;
+    margin-top: 0px;
   }
 `
 
 const InputStyledFooter = styled.input`
+  flex-grow: 1;
+  //min-width: 360px;
+  //max-width: 450px;
+  width: 450px;
     width: 100%;
     height: 60px;
     padding: 16px 177px 16px 22px;

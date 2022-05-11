@@ -14,7 +14,7 @@ const Logo = ( {color} ) => {
     return (
         <BoxLogo >
             {color === "dark" && <LogoIcon src={LogoVectorDark.src} alt={"logo"} />}
-            {color === "Light" && <LogoIcon src={LogoVectorLight.src} alt={"logo"} />}
+            {color === "light" && <LogoIcon src={LogoVectorLight.src} alt={"logo"} />}
 
         </BoxLogo>
     );
