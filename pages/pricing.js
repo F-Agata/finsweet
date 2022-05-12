@@ -49,7 +49,7 @@ const Pricing = () => {
                 <Box>
                     <ChoiceMonthlyYearly/>
                 </Box>
-                <Box mb={42}
+                <Box
                      p={{_: '0px 40px ', tablet: '0px 40px', }}
                 >
                     <OneOptionOnePrice pricingItems={pricingItems}/>
@@ -65,22 +65,30 @@ export default Pricing;
 
 const BoxStyledGradient1 = styled(Box)`
   position: absolute;
-  top: 30%;
-  left: -50%;
-  width: 656px;
-  height: 656px;
+  top: 20%;
+  left: 0%;
+  width: 556px;
+  height: 556px;
   border-radius:50%;
   background: ${props => props.theme.gradients.gradientBlur};
-  filter: blur(100px);
+  filter: blur(300px);
+  @media (min-width: 1024px) {
+    top: 20%;
+    left: -20%;
+  }
  `
 
 const BoxStyledGradient2 = styled(Box)`
   position: absolute;
-  top: 40%;
-  left: 70%;
+  top: 50%;
+  left: 40%;
   width: 660px;
   height: 690px;
   border-radius:50%;
   background: ${props => props.theme.gradients.gradientBlur};
-  filter: blur(100px);
+  filter: blur(300px);
+  @media (min-width: 1024px) {
+    top: 40%;
+    left: 40%;
+  }
 `
