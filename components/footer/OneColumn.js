@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import styled, { css } from "styled-components";
 import TitleAndText from "../../styles/TitleAndText";
 import Box from "../../styles/Box";
@@ -6,6 +6,10 @@ import Link from "../../styles/Link";
 
 
 const OneColumn = ( {footerItems} ) => {
+
+    // useEffect(() => {
+    //     console.log(footerItems)
+    // },[])
 
     const footerItem = footerItems.map((item) => (
         <Box key={item.title}
@@ -15,7 +19,7 @@ const OneColumn = ( {footerItems} ) => {
              textAlign={{_: 'center', tablet: 'left', }}
         >
             <TitleAndText variant={'title5'} color={"colorWhite"}>{item.title}</TitleAndText>
-            {item.options.map((option) => <TitleAndText variant={'textSmall'} color={"colorWhite"} opacity={'50%'}>{option.name} </TitleAndText>)}
+            {item.options.map((option) => <TitleAndText key={option.name} variant={'textSmall'} color={"colorWhite"} opacity={'50%'}>{option.name} </TitleAndText>)}
         </Box>
     ));
 

@@ -1,10 +1,12 @@
 import React  from "react";
 import styled, { css } from "styled-components";
+import pricingItems from "../components/routes/pricing/pricingItems";
 import TitleAndText from "../styles/TitleAndText";
 import Box from "../styles/Box";
 import Btn from "../styles/Btn";
 import Link from "../styles/Link"
-import OneOption from "../components/routes/pricing/OneOption";
+import OneOptionOnePrice from "../components/routes/pricing/OneOptionOnePrice";
+import ChoiceMonthlyYearly from "../components/routes/pricing/ChoiceMonthlyYearly";
 
 
 
@@ -26,7 +28,7 @@ const Pricing = () => {
             <BoxStyledGradient1/>
             <BoxStyledGradient2/>
             <Box zIndex={'1'}
-                // border={'yellow 2px solid'}
+                border={'yellow 2px solid'}
                  display={'flex'}
                  flexDirection={'column'}
                  justifyContent={'center'}
@@ -44,10 +46,13 @@ const Pricing = () => {
                     </TitleAndText>
 
                 </Box>
+                <Box>
+                    <ChoiceMonthlyYearly/>
+                </Box>
                 <Box mb={42}
                      p={{_: '0px 40px ', tablet: '0px 40px', }}
                 >
-                    <OneOption/>
+                    <OneOptionOnePrice pricingItems={pricingItems}/>
 
                 </Box>
 
@@ -60,22 +65,22 @@ export default Pricing;
 
 const BoxStyledGradient1 = styled(Box)`
   position: absolute;
-  top: 0%;
-  left: 60%;
-  width: 510px;
-  height: 510px;
+  top: 30%;
+  left: -50%;
+  width: 656px;
+  height: 656px;
   border-radius:50%;
   background: ${props => props.theme.gradients.gradientBlur};
-  filter: blur(80px);
+  filter: blur(100px);
  `
 
 const BoxStyledGradient2 = styled(Box)`
   position: absolute;
-  top: 0%;
-  left: 60%;
-  width: 510px;
-  height: 510px;
+  top: 40%;
+  left: 70%;
+  width: 660px;
+  height: 690px;
   border-radius:50%;
   background: ${props => props.theme.gradients.gradientBlur};
-  filter: blur(80px);
+  filter: blur(100px);
 `

@@ -9,13 +9,13 @@ import Link from "../../../styles/Link"
 
 
 
-const OneOption = () => {
+const ChoiceMonthlyYearly = () => {
 
     return (
         <Box
-            // border={'orange 2px solid'}
+            border={'orange 2px solid'}
             m={'0 auto'}
-            p={{_: '100px 0px 40px 0px', tablet: '150px 0px 40px 0px', }}
+            p={{_: '10px 0px 40px 0px', tablet: '15px 0px 40px 0px', }}
             textAlign={'center'}
             display={'flex'}
             flexDirection={'column'}
@@ -23,13 +23,15 @@ const OneOption = () => {
             alignContent={'center'}
             alignItems={'center'}
             position={'relative'}
+            width={300}
+            hight={60}
         >
 
-                    <TitleAndText variant={'title1'} mb={34}>Opcja do wyboru</TitleAndText>
+            <TitleAndText variant={'textSmall'} mb={34}>Monthly/Yearly</TitleAndText>
 
         </Box>
     );
 }
 
-export default OneOption;
+export default ChoiceMonthlyYearly;
 
