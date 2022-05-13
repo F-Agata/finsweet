@@ -15,7 +15,7 @@ const ChoiceMonthlyYearly = () => {
         <Box
             border={'orange 2px solid'}
             m={'0 auto'}
-            p={{_: '10px 0px 40px 0px', tablet: '15px 0px 40px 0px', }}
+            p={{_: '1px 0px 40px 0px', tablet: '1px 0px 40px 0px', }}
             textAlign={'center'}
             display={'flex'}
             flexDirection={'column'}
@@ -27,7 +27,7 @@ const ChoiceMonthlyYearly = () => {
             hight={60}
         >
 
-            <TitleAndText variant={'textSmall'} mb={34}>Monthly/Yearly</TitleAndText>
+            <TitleAndText variant={'textSmall'} mb={1}>Monthly/Yearly</TitleAndText>
 
         </Box>
     );
