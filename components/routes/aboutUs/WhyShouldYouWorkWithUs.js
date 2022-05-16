@@ -41,6 +41,7 @@ const WhyShouldYouWorkWithUs = () => {
             flexDirection={{_: 'column', tablet: 'row', }}
             justifyContent={{_: 'center', tablet: 'space-between', }}
             alignItems={'flex-start'}
+            p={'0 40px 40px 40px'}
         >
             <Box
                 width={{_: '100%', tablet: '47%', }}
