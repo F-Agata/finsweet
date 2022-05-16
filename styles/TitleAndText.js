@@ -54,6 +54,11 @@ const TitleAndText = styled.p`
                 lineHeight: "lh5",
                 fontWeight: "fontRegular"
             },
+            textColorful: {
+              fontSize: "fs4",
+              lineHeight: "lh4",
+              fontWeight: "fontRegular",
+            },
           }
       })
     };

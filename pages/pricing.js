@@ -1,16 +1,16 @@
-import React  from "react";
-import styled, { css } from "styled-components";
+import React,  { useState }  from "react";
+import styled from "styled-components";
 import pricingItems from "../components/routes/pricing/pricingItems";
 import TitleAndText from "../styles/TitleAndText";
 import Box from "../styles/Box";
-import Btn from "../styles/Btn";
-import Link from "../styles/Link"
 import OneOptionOnePrice from "../components/routes/pricing/OneOptionOnePrice";
 import ChoiceMonthlyYearly from "../components/routes/pricing/ChoiceMonthlyYearly";
 
 
-
 const Pricing = () => {
+
+    const [isChoiceMonthly, setIsChoiceMonthly] = useState(false);
+    const [isChoiceYearly, setIsChoiceYearly] = useState(true);
 
     return (
         <Box
@@ -28,7 +28,7 @@ const Pricing = () => {
             <BoxStyledGradient1/>
             <BoxStyledGradient2/>
             <Box zIndex={'1'}
-                border={'yellow 2px solid'}
+                // border={'yellow 2px solid'}
                  display={'flex'}
                  flexDirection={'column'}
                  justifyContent={'center'}
@@ -47,12 +47,14 @@ const Pricing = () => {
 
                 </Box>
                 <Box>
-                    <ChoiceMonthlyYearly/>
+                    <ChoiceMonthlyYearly setIsChoiceMonthly={setIsChoiceMonthly}
+                                         setIsChoiceYearly={setIsChoiceYearly}
+                    />
                 </Box>
                 <Box
                      p={{_: '0px 40px ', tablet: '0px 40px', }}
                 >
-                    <OneOptionOnePrice pricingItems={pricingItems}/>
+                    <OneOptionOnePrice pricingItems={pricingItems} isChoiceMonthly={isChoiceMonthly} isChoiceYearly={isChoiceYearly}/>
 
                 </Box>
 
@@ -67,28 +69,32 @@ const BoxStyledGradient1 = styled(Box)`
   position: absolute;
   top: 20%;
   left: 0%;
-  width: 556px;
-  height: 556px;
+  width: 656px;
+  height: 656px;
   border-radius:50%;
   background: ${props => props.theme.gradients.gradientBlur};
   filter: blur(300px);
   @media (min-width: 1024px) {
     top: 20%;
     left: -20%;
+    width: 556px;
+    height: 556px;
   }
  `
 
 const BoxStyledGradient2 = styled(Box)`
   position: absolute;
-  top: 50%;
-  left: 40%;
-  width: 660px;
-  height: 690px;
+  width: 860px;
+  height: 890px;
+  top: 66%;
+  left: 30%;
   border-radius:50%;
   background: ${props => props.theme.gradients.gradientBlur};
   filter: blur(300px);
   @media (min-width: 1024px) {
-    top: 40%;
+    top: 30%;
     left: 40%;
+    width: 660px;
+    height: 690px;
   }
 `

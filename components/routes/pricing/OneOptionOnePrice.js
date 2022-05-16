@@ -4,7 +4,7 @@ import TitleAndText from "../../../styles/TitleAndText"
 import Box from "../../../styles/Box"
 import Btn from "../../../styles/Btn";
 
-const OneOptionOnePrice = ( { pricingItems } ) => {
+const OneOptionOnePrice = ( { pricingItems, isChoiceMonthly, isChoiceYearly } ) => {
 
     const pricingItem = pricingItems.map((item, index) => {
 
@@ -18,6 +18,7 @@ const OneOptionOnePrice = ( { pricingItems } ) => {
                 <Box
                     display={'flex'}
                     p={'0 40px 20px 40px'}
+                    alignSelf={'flex-start'}
                 >
                     <Box pr={24}>
                         <img src={`/${item.icon}.png`} alt={"icon"}/>
@@ -31,8 +32,10 @@ const OneOptionOnePrice = ( { pricingItems } ) => {
                      borderBottom={'1px solid '}
                      borderColor={'colorLightFooter'}
                 />
-                <Box  p={'40px'}>
-                    {item.listInfo.map((oneLine)=> (
+                <Box  p={'40px'}
+                      alignSelf={'flex-start'}
+                >
+                     {item.listInfo.map((oneLine)=> (
                         <Box key={`${item.title}.${oneLine.infoName}`}
                              display={'flex'}
                              pt={20}
@@ -46,10 +49,12 @@ const OneOptionOnePrice = ( { pricingItems } ) => {
                         </Box>
                     ))}
                 </Box>
-                <TitleAndText variant={'textSmall'} p={'0px 40px'}  >{item.smallDescription}</TitleAndText>
-                <TitleAndText variant={'title1'} pt={40} >{item.price}</TitleAndText>
+                {isChoiceMonthly && <TitleAndText variant={'textSmall'} p={'0px 40px'}  >{item.smallDescription}</TitleAndText>}
+                {isChoiceYearly && <TitleAndText variant={'textSmall'} p={'0px 40px'}  >{item.smallDescription} Yearly plan lorem lorem lorem yearly plan </TitleAndText>}
+                {isChoiceMonthly && <TitleAndText variant={'title1'} pt={40} >{item.priceM}</TitleAndText>}
+                {isChoiceYearly && <TitleAndText variant={'title1'} pt={40} >{item.priceY}</TitleAndText>}
                 <TitleAndText variant={'textSmall'}>{item.time}</TitleAndText>
-                <Btn variant={'dark'} m={"40px 100px 0px 100px"}  >Get started</Btn>
+                <Btn variant={'dark'} maxWidth={"200px"} mt={40} >Get started</Btn>
             </StyledBoxOnePlan>
         )
 
@@ -67,7 +72,6 @@ const OneOptionOnePrice = ( { pricingItems } ) => {
             justifyContent={{_: 'center', tabletL: 'space-between', }}
             alignContent={'center'}
             alignItems={'center'}
-            // position={'relative'}
         >
             {pricingItem}
 
@@ -86,11 +90,13 @@ const StyledBoxOnePlan = styled(Box)`
   padding: 48px 0px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   ${({ isEven, theme }) => css`
     border-color: ${isEven ? theme.colors.colorSecondary : theme.colors.colorWhite};
     background: ${isEven ? "linear-gradient(171deg, rgba(215,231,249,1) 0%, rgba(213,244,236,1) 100%)" : theme.colors.colorWhite};
-   box-shadow: ${isEven ? "0px 4px 4px rgba(0, 0, 0, 0.25)" : null};;
+   box-shadow: ${isEven ? "0px 4px 4px rgba(0, 0, 0, 0.25)" : null};
   `};
   
   @media (min-width: 1024px) {

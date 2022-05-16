@@ -1,9 +1,9 @@
 import React  from "react";
 import styled, { css } from "styled-components";
 
-import Btn from "../../../styles/Btn";
+import Btn from "../styles/Btn";
 
-const InputHome = () => {
+const InputFreeTrial = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,7 +35,7 @@ const InputHome = () => {
     );
 };
 
-export default InputHome;
+export default InputFreeTrial;
 
 const FormStyledHome = styled.form`
   //border: crimson 2px solid;

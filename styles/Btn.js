@@ -57,8 +57,27 @@ const Btn = styled.button`
             borderColor: `${theme.colors.colorBtnHover}`,
           },
         },
+        colorLightFromTheme:
+            {
+              filter: 'drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25))',
+              color: "colorWhite",
+              bg: "colorPrimary",
+              borderColor: `${theme.colors.colorPrimary}`,
+              '&:hover': {
+                color: "colorPrimary",
+                bg: "colorLight",
+                borderColor: `${theme.colors.colorLight}`,
+              },
+              '&:active': {
+                color: "colorPrimary",
+                bg: "colorLight",
+                borderColor: `${theme.colors.colorLight}`,
+              },
+            },
       },
     })
   }
 `
 export default Btn
+
+

@@ -1,19 +1,23 @@
-import React  from "react";
-import styled, { css } from "styled-components";
-import TitleAndText from "../styles/TitleAndText";
 import Box from "../styles/Box";
+import WhyShouldYouWorkWithUs from "../components/routes/aboutUs/WhyShouldYouWorkWithUs";
 
 
 const AboutUs = () => {
 
 
-
     return (
-        <Box>
-<TitleAndText>sdhfsdjfjsdfjshdfjdsf </TitleAndText>
-
-
-
+        <Box
+            border={'orange 2px solid'}
+            m={'0 auto'}
+            p={{_: '100px 40px 40px 40px', tablet: '150px 40px 40px 40px', }}
+            textAlign={'center'}
+            display={'flex'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            alignContent={'center'}
+            alignItems={'center'}
+         >
+            <WhyShouldYouWorkWithUs/>
         </Box>
     );
 }

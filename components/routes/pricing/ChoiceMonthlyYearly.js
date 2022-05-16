@@ -1,34 +1,32 @@
-import React  from "react";
-import styled, { css } from "styled-components";
-import TitleAndText from "../../../styles/TitleAndText"
 import Box from "../../../styles/Box"
 import Btn from "../../../styles/Btn";
-import Link from "../../../styles/Link"
 
 
+const ChoiceMonthlyYearly = ({setIsChoiceMonthly, setIsChoiceYearly}) => {
 
+    const onClickChoiceMonthly = () => {
+        setIsChoiceMonthly(true)
+        setIsChoiceYearly(false)
+    }
 
-
-const ChoiceMonthlyYearly = () => {
+    const onClickChoiceYearly = () => {
+        setIsChoiceMonthly(false)
+        setIsChoiceYearly(true)
+    }
 
     return (
         <Box
-            border={'orange 2px solid'}
-            m={'0 auto'}
-            p={{_: '1px 0px 40px 0px', tablet: '1px 0px 40px 0px', }}
-            textAlign={'center'}
+            // border={'orange 2px solid'}
+            bg={'colorLight'}
+            p={3}
             display={'flex'}
-            flexDirection={'column'}
-            justifyContent={'center'}
+            justifyContent={'space-between'}
             alignContent={'center'}
             alignItems={'center'}
-            position={'relative'}
-            width={300}
-            hight={60}
+            borderRadius={24}
         >
-
-            <TitleAndText variant={'textSmall'} mb={1}>Monthly/Yearly</TitleAndText>
-
+            <Btn variant={'colorLightFromTheme'}  onClick={onClickChoiceMonthly}>Monthly</Btn>
+            <Btn variant={'colorLightFromTheme'}  onClick={onClickChoiceYearly}>Yearly</Btn>
         </Box>
     );
 }
