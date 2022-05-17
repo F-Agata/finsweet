@@ -4,7 +4,6 @@ import TitleAndText from "../../../styles/TitleAndText"
 import Box from "../../../styles/Box"
 import Btn from "../../../styles/Btn";
 import Link from "../../../styles/Link";
-import BoxColorFulBg from "../../../styles/BoxColorFulBg";
 
 const MoreImpressions = () => {
 

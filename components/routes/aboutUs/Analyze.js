@@ -2,14 +2,14 @@ import TitleAndText from "../../../styles/TitleAndText"
 import Box from "../../../styles/Box"
 import BoxColorFulBg from "../../../styles/BoxColorFulBg"
 
-import whyItems from "./whyItems";
+import analyzeItems from "./analyzeItems";
 
-const WhyShouldYouWorkWithUs = () => {
+const Analyze = () => {
 
-    const whyItem = whyItems.map((item) => (
-        <Box key={item}
+    const analyzeItem = analyzeItems.map((item) => (
+        <Box key={item.title}
             // border={'pink 2px solid'}
-             // mb={{_: '20px', tabletL: '0', }}
+            // mb={{_: '20px', tabletL: '0', }}
              p={'0px 0px 20px 0'}
              display={'flex'}
              justifyContent={'flex-start'}
@@ -18,13 +18,16 @@ const WhyShouldYouWorkWithUs = () => {
             <Box
                 // border={'pink 2px solid'}
                 // mb={20}
-                pr={20}
+                mr={20}
+                width={72}
+                // height={72}
             >
-                <img src={`iconArrowRight.svg`} alt={"icon"} />
+                <img src={`/${item.icon}.png`} alt={"icon"} />
             </Box>
 
             <Box >
-                <TitleAndText variant={'textSmall'}>{item}</TitleAndText>
+                <TitleAndText variant={'title5'} mb={10}>{item.title}</TitleAndText>
+                <TitleAndText variant={'textLarge'}mb={10}>{item.smallDescription}</TitleAndText>
             </Box>
         </Box>
     ));
@@ -48,31 +51,32 @@ const WhyShouldYouWorkWithUs = () => {
                     <TitleAndText variant={'textColorful'}
                                   colorFulBg
                     >
-                        Why should you work with us?
+                        Discover More
                     </TitleAndText>
                 </BoxColorFulBg>
                 <TitleAndText variant={'title3'}
                               mb={40}
                               textAlign={'left'}
                 >
-                    To upscale your business to the next level
+                    Analyze your sales and marketing leads
                 </TitleAndText>
                 <TitleAndText variant={'textSmall'}
                               mb={40}
                               textAlign={'left'}
                 >
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua invidunt ut labore.
+                    Lorem Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua invidunt ut labore. ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua invidunt ut labore.
                 </TitleAndText>
             </Box>
             <Box
                 width={{_: '100%', tablet: '47%', }}
             >
-                {whyItem}
+                {analyzeItem}
             </Box>
 
         </Box>
     );
 }
 
-export default WhyShouldYouWorkWithUs;
+export default Analyze;
+
 

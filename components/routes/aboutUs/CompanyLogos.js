@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Box from "../../../styles/Box"
 import Link from "../../../styles/Link";
 
-const listCompanyLogosName = ['companyLogo1', 'companyLogo2', 'companyLogo3', 'companyLogo4', 'companyLogo5']
+import listCompanyLogosName from "./listCompanyLogosName";
 
 const CompanyLogos = () => {
 
@@ -13,7 +13,7 @@ const CompanyLogos = () => {
              m={20}
         >
             <Link href={`/#`}>
-                <StyledAnalyzeIcon src={`/${item}.png`} alt={"logo"} />
+                <StyledCompanyIcon src={`/${item}.png`} alt={"logo"} />
             </Link>
         </Box>
     ))
@@ -22,6 +22,7 @@ const CompanyLogos = () => {
             <Box
                 // border={'green 2px solid'}
                 p={'40px 0'}
+                m={"40px 0px"}
                 width={'100%'}
                 display={'flex'}
                 justifyContent={ 'space-evenly'}
@@ -36,7 +37,6 @@ const CompanyLogos = () => {
 
 export default CompanyLogos;
 
-const StyledAnalyzeIcon = styled.img`
+const StyledCompanyIcon = styled.img`
   width: 100%;
-  
-    `
+      `
