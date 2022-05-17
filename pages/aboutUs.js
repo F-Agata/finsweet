@@ -1,6 +1,7 @@
 import Box from "../styles/Box";
 import WhyShouldYouWorkWithUs from "../components/routes/aboutUs/WhyShouldYouWorkWithUs";
 import MoreImpresions from "../components/routes/aboutUs/MoreImpressions";
+import CompanyLogos from "../components/routes/aboutUs/CompanyLogos";
 
 
 const AboutUs = () => {
@@ -20,6 +21,7 @@ const AboutUs = () => {
          >
             <WhyShouldYouWorkWithUs/>
             <MoreImpresions/>
+            <CompanyLogos/>
         </Box>
     );
 }
