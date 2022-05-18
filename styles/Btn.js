@@ -74,6 +74,23 @@ const Btn = styled.button`
                 borderColor: `${theme.colors.colorLight}`,
               },
             },
+        colorBgTransparent:
+                {
+                  filter: 'drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25))',  
+                  color: "colorWhite",
+                  bg: "colorPrimary",
+                  borderColor: `${theme.colors.colorPrimary}`,
+                  '&:hover': {
+                    color: "colorPrimary",
+                    bg: "transparent",
+                    borderColor: `${theme.colors.colorLight}`,
+                  },
+                  '&:active': {
+                    color: "colorPrimary",
+                    bg: "transparent",
+                    borderColor: `${theme.colors.colorLight}`,
+                  },
+                },
       },
     })
   }

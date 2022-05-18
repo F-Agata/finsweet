@@ -64,7 +64,7 @@ const Footer = () => {
                       // border={'pink 2px solid'}
                         display={'flex'}
                         flexDirection={'column'}
-                        alignItems={{_: 'center', tablet: 'flex-start', }}
+                        alignItems={{_: 'center', tabletL: 'flex-start', }}
                         pt={{_: '20px', tablet: '0', }}
                   >
                       {modificationOrderFooter &&   <Link href={`/`}><Logo color={"light"}/></Link>}

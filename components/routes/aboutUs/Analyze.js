@@ -9,18 +9,14 @@ const Analyze = () => {
     const analyzeItem = analyzeItems.map((item) => (
         <Box key={item.title}
             // border={'pink 2px solid'}
-            // mb={{_: '20px', tabletL: '0', }}
              p={'0px 0px 20px 0'}
              display={'flex'}
              justifyContent={'flex-start'}
              textAlign={'left'}
         >
             <Box
-                // border={'pink 2px solid'}
-                // mb={20}
-                mr={20}
-                width={72}
-                // height={72}
+               mr={20}
+               width={72}
             >
                 <img src={`/${item.icon}.png`} alt={"icon"} />
             </Box>

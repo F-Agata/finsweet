@@ -1,22 +1,17 @@
-import React  from "react";
-import styled, { css } from "styled-components";
-import TitleAndText from "../../styles/TitleAndText";
-import Box from "../../styles/Box";
+import Box from '../../styles/Box'
 
+import ProductsHeader from "../../components/routes/products/ProductsHeader";
+import GetTheBest from "../../components/routes/products/GetTheBest";
 
-const Products  = () => {
-
-
+const Products = () => {
 
     return (
         <Box>
-            <TitleAndText>Products </TitleAndText>
-
-
-
+            <ProductsHeader/>
+            <GetTheBest/>
         </Box>
     );
 }
 
-export default Products ;
+export default Products;
 

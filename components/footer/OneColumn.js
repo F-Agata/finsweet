@@ -39,7 +39,7 @@ const BoxOneColumn = styled(Box)`
     flex-direction: column;
    align-items: center;
   padding-top: 20px;
-    @media (min-width: 768px) {
+    @media (min-width: 568px) {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;

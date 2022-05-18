@@ -56,7 +56,6 @@ const Workers = (  ) => {
                 flexDirection={{_: 'column', tablet: 'row', }}
                 justifyContent={{_: 'center', tablet: 'space-evenly', }}
                 alignItems={{_: 'center', tablet: 'stretch', }}
-                // alignItems={'center'}
                 flexWrap={'wrap'}
             >
                 {workerItem}
@@ -70,6 +69,7 @@ export default Workers;
 const StyledBoxOneWorker = styled(Box)`
   border: 2px solid;
   border-color: ${props => props.theme.colors.colorLight};
+  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
   margin: 20px 0;
   padding: 60px 40px;
