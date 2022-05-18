@@ -2,6 +2,7 @@ import Box from '../../styles/Box'
 
 import ProductsHeader from "../../components/routes/products/ProductsHeader";
 import GetTheBest from "../../components/routes/products/GetTheBest";
+import ChartsPage from "../../components/routes/products/ChartsPage";
 
 const Products = () => {
 
@@ -9,6 +10,8 @@ const Products = () => {
         <Box>
             <ProductsHeader/>
             <GetTheBest/>
+            <ChartsPage/>
+
         </Box>
     );
 }

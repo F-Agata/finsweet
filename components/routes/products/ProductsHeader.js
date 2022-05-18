@@ -28,7 +28,7 @@ const ProductsHeader = () => {
                  flexDirection={{_: 'column', tabletL: 'row', }}
                  justifyContent={{_: 'center', tabletL: 'space-between', }}
                  alignItems={'center'}
-                 p={'0 40px 40px 40px'}
+                 p={'40px 40px 40px 40px'}
             >
                 <Box
                     // border={'green 2px solid'}
@@ -73,13 +73,13 @@ export default ProductsHeader;
 
 const BoxStyledGradient = styled(Box)`
   position: absolute;
-  top: 10%;
+  top: -10%;
   left: 50%;
   width: 555px;
   height: 555px;
   border-radius: 600px;
   background: ${props => props.theme.gradients.gradientBlur};
-  filter: blur(200px);
+  filter: blur(150px);
  `
 
 const StyledImgHeader = styled.img`

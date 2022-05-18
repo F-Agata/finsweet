@@ -8,7 +8,7 @@ const PartFirst = () => {
 
     return (
         <Box
-            border={'orange 2px solid'}
+            // border={'orange 2px solid'}
             m={'0 auto'}
             p={{_: '100px 0px 40px 0px', tablet: '150px 0px 40px 0px', }}
             textAlign={'center'}

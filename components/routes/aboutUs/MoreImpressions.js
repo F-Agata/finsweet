@@ -18,7 +18,7 @@ const MoreImpressions = () => {
             <BoxStyledGradient/>
 
             <Box
-                 p={'40px 40px 40px 40px'}
+                 p={'80px 40px 80px 40px'}
                  bg={'transparent'}
                  display={'flex'}
                  flexDirection={{_: 'column', tablet: 'row', }}

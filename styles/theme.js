@@ -13,7 +13,8 @@ export default {
   },
   gradients: {
     gradientLabel: "linear-gradient(53.94deg, #373FFF 15.02%, #3ACAF8 82.83%);",
-    gradientBlur: "radial-gradient(#D798E1 17.55%, #9BFFA5 27.56%, #AED3FF 49.89%, #C9D4EF 56.53%, #CACFFA 65.69%)",
+    gradientBlur: "radial-gradient(#D798E1 7.55%,  #9BFFA5 27.56%, #AED3FF 49.89%, #C9D4EF 56.53%, #CACFFA 65.69%)",
+    // gradientBlur: "radial-gradient(#D798E1 17.55%, #9BFFA5 27.56%, #AED3FF 49.89%, #C9D4EF 56.53%, #CACFFA 65.69%)",
     // gradientBlur: "radial-gradient(483.9% 2719.65% at -49.5% -250%, #D798E1 17.55%, #9BFFA5 27.56%, #AED3FF 49.89%, #C9D4EF 56.53%, #CACFFA 65.69%)",
    },
   fontWeights: {

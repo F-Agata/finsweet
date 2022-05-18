@@ -22,7 +22,7 @@ const GetTheBest = () => {
         >
             <BoxStyledGradient/>
             <Box zIndex={'1'}
-                border={'yellow 2px solid'}
+                // border={'yellow 2px solid'}
                  display={'flex'}
                  flexDirection={'column'}
                  justifyContent={'center'}
@@ -54,7 +54,7 @@ export default GetTheBest;
 const BoxStyledGradient = styled(Box)`
   position: absolute;
   bottom: 0%;
-  lright: 0%;
+  right: 0%;
   width: 1689px;
   height: 1917px;
   border-radius: 700px;
