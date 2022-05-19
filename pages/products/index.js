@@ -3,6 +3,7 @@ import Box from '../../styles/Box'
 import ProductsHeader from "../../components/routes/products/ProductsHeader";
 import GetTheBest from "../../components/routes/products/GetTheBest";
 import ChartsPage from "../../components/routes/products/ChartsPage";
+import Features from "../../components/routes/products/Features";
 
 const Products = () => {
 
@@ -11,7 +12,7 @@ const Products = () => {
             <ProductsHeader/>
             <GetTheBest/>
             <ChartsPage/>
-
+            <Features/>
         </Box>
     );
 }
