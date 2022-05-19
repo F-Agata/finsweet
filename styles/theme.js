@@ -6,6 +6,7 @@ export default {
     colorPrimary: "#1D2130",
     colorSecondary: "#6B7CFF",
     colorLight: "#E0E4FC",
+    colorLight50: "rgba(224, 228, 252, 0.5)",
     colorIcon: "#503AE7",
     colorBtnHover: "#313852",
     colorWhite: "#FFFFFF",

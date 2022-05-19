@@ -30,7 +30,7 @@ const WhyShouldYouWorkWithUs = () => {
 
     return (
         <Box
-            border={'orange 2px solid'}
+            // border={'orange 2px solid'}
             display={'flex'}
             flexDirection={{_: 'column', tablet: 'row', }}
             justifyContent={{_: 'center', tablet: 'space-between', }}

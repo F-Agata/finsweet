@@ -25,7 +25,7 @@ const Features = () => {
                 <img src={`/${item.icon}`} alt={"icon"} />
             </Box>
             <Box
-                border={'blue 2px solid'}
+                // border={'blue 2px solid'}
                   // flexGrow={'1'}
                 // width={"100%"}
                 alignSelf={'stretch'}
@@ -39,7 +39,7 @@ const Features = () => {
             </Box>
 
             <Box
-                border={'blue 2px solid'}
+                // border={'blue 2px solid'}
                   flexGrow={'2'}
                   // alignSelf={'flex-end'}
                 // alignSelf={'stretch'}
@@ -72,7 +72,8 @@ const Features = () => {
                 <TitleAndText variant={'title2'}>Features</TitleAndText>
             </Box>
             <Box
-                bg={'rgba(215, 152, 225, 0.15)'}
+                // bg={'rgba(215, 152, 225, 0.15)'}
+                bg={'colorLight50'}
                 borderRadius={24}
                 p={'40px 40px'}
                 display={'flex'}
