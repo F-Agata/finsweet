@@ -10,7 +10,7 @@ const ProductHeader  = () => {
 
     return (
         <Box
-            border={'orange 2px solid'}
+            // border={'orange 2px solid'}
             width={'100%'}
             m={'0 auto'}
             pt={60}
@@ -50,11 +50,12 @@ const ProductHeader  = () => {
                 </Box>
                 <Box
                         // border={'purple 2px solid'}
-                       mb={40}
+                       mb={60}
                 >
                         <StyledImg src={`/chartImage2.png`} alt={"icon"} />
                 </Box>
-                <Box  mb={20}
+                <Box
+                      mb={20}
                       maxWidth={846}
                 >
                     <BoxColorFulBg
@@ -96,7 +97,7 @@ const BoxStyledGradient = styled(Box)`
  `
 
 const StyledImg = styled.img`
-    width: 100%;
+    width: 80%;
     `
 
 
