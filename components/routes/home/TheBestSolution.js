@@ -21,7 +21,7 @@ const TheBestSolution = () => {
                 width={48}
                 hight={48}
                 mb={20}>
-                <img src={`/${item.icon}.svg`} alt={"icon"} />
+                <img src={`/home/${item.icon}.svg`} alt={"icon"} />
             </Box>
             <Box
                 // border={'green 2px solid'}

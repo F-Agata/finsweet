@@ -1,9 +1,22 @@
 import Box from "../styles/Box"
 import Btn from "../styles/Btn";
 import TitleAndText from "../styles/TitleAndText"
+import Link from "../styles/Link"
 
+// import productInfoItems from "../components/routes/products/productSingle/productInfoItems"
 
-const BtnsChoiceProduct = () => {
+// {productInfoItems}
+const BtnsChoiceProduct = ({productInfoItems}) => {
+
+    console.log(productInfoItems, "productInfoItems dla BtnsChoice")
+
+    const btnSingleToChoiceProducts = productInfoItems.map((item) => (
+        <Box key={`${item.nameProduct}${item.nameProduct}`}>
+            <Link href={`/products/${item.id}`}>
+                <Btn variant={'colorLightFromTheme'}  m={'0 auto'}>{item.nameProduct}</Btn>
+            </Link>
+        </Box>
+    ))
 
     return (
         <Box
@@ -20,7 +33,7 @@ const BtnsChoiceProduct = () => {
                 mb={34}
                 maxWidth={846}
             >
-                <TitleAndText variant={'title1'}
+                <TitleAndText variant={'title2'}
                               p={{_: '0px 40px ', tablet: '0px 60px', }}
                 >
                     Choice your product and read more
@@ -38,13 +51,10 @@ const BtnsChoiceProduct = () => {
                 justifyContent={{_: 'center', tablet: 'space-evenly', }}
                 alignItems={{_: 'center', tablet: 'stretch', }}
             >
-                <Btn variant={'colorLightFromTheme'} >Regular</Btn>
-                <Btn variant={'colorLightFromTheme'} >Platinum</Btn>
-                <Btn variant={'colorLightFromTheme'} >Standard</Btn>
+                {btnSingleToChoiceProducts}
             </Box>
         </Box>
     );
 }
 
 export default BtnsChoiceProduct;
-

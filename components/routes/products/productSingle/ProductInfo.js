@@ -8,54 +8,45 @@ import productInfoItems from "./productInfoItems";
 
 const ProductInfo = ({chosenProduct}) => {
 
-    console.log('chosenProduct', chosenProduct)
-
-    const  productInfoItem =
-
-            <StyledBoxOneWorker
-            >
-                {chosenProduct.moreInfo.map((oneInfo) => (
-                    <Box key={oneInfo.icon}>
-                    <Box
-                        border={'blue 2px solid'}
-                        width={48}
-                        height={48}
-                        mb={20}
-                    >
-                        <img src={`/productSingle/${oneInfo.icon}`} alt={"icon"} />
-                    </Box>
-                    <Box
+    const  productInfoItem =  chosenProduct.moreInfo.map((oneInfo) => (
+        <StyledBoxOneWorker key={oneInfo.icon}
+            // border={'blue 2px solid'}
+        >
+            <Box
                     // border={'blue 2px solid'}
-                    // flexGrow={'1'}
-                    // width={"100%"}
-                    alignSelf={'stretch'}
-                    >
-                    <TitleAndText variant={'title3'}
-                    textAlign={{_: 'center', tabletL: 'left', }}
+                    width={48}
+                    height={48}
                     mb={20}
-                    >
-                {oneInfo.title}
-                    </TitleAndText>
-                    </Box>
-
-                    <Box
-                    // border={'blue 2px solid'}
-                    flexGrow={'2'}
-                    // alignSelf={'flex-end'}
-                    // alignSelf={'stretch'}
-                    >
-                    <TitleAndText variant={'textLarge'}
-                    textAlign={{_: 'center', tabletL: 'left', }}
-                    >
-                {oneInfo.smallDescription}
-                    </TitleAndText>
-                    </Box>
-                    </Box>
-                ))}
-
-            </StyledBoxOneWorker>
-
-        ;
+            >
+                    <img src={`/productSingle/${oneInfo.icon}.svg`} alt={"icon"} />
+            </Box>
+            <Box
+                // border={'blue 2px solid'}
+                // flexGrow={'1'}
+                // width={"100%"}
+                alignSelf={'stretch'}
+            >
+                <TitleAndText variant={'title3'}
+                              textAlign={{_: 'center', tabletL: 'left', }}
+                              mb={20}
+                >
+                    {oneInfo.title}
+                </TitleAndText>
+            </Box>
+            <Box
+                // border={'blue 2px solid'}
+                flexGrow={'2'}
+                // alignSelf={'flex-end'}
+                // alignSelf={'stretch'}
+            >
+                <TitleAndText variant={'textLarge'}
+                              textAlign={{_: 'center', tabletL: 'left', }}
+                >
+                     {oneInfo.smallDescription}
+                </TitleAndText>
+        </Box>
+        </StyledBoxOneWorker>
+                ));
 
     return (
         <Box
@@ -72,14 +63,13 @@ const ProductInfo = ({chosenProduct}) => {
             <Box  mb={20}
                   maxWidth={846}
             >
-                {productInfoItems.map((item) => (
-                    <TitleAndText key={item.nameProduct}
-                        variant={'title2'}
+                <TitleAndText
+                                  variant={'title2'}
                                   mb={20}
-                    >
-                        {`  Our corporate values ${item.nameProduct}`}
-                    </TitleAndText>
-                ))}
+                >
+                        {`Our corporate values ${chosenProduct.nameProduct}`}
+                </TitleAndText>
+
                 <TitleAndText variant={'textSmall'}
                               mb={20}
                 >
@@ -95,11 +85,12 @@ const ProductInfo = ({chosenProduct}) => {
                 flexDirection={{_: 'column', tabletL: 'row', }}
                 justifyContent={{_: 'center', tabletL: 'space-eleven', }}
                 alignItems={{_: 'center', tabletL: 'stretch', }}
+                flexWrap={'wrap'}
             >
                 {productInfoItem}
             </Box>
             <Box>
-                <Link href={`/pricing`}><Btn variant="dark" ml={20}> Pricing</Btn></Link>
+                <Link href={`/pricing`}><Btn variant="dark" mt={40}> Pricing</Btn></Link>
             </Box>
         </Box>
     );
@@ -108,7 +99,7 @@ const ProductInfo = ({chosenProduct}) => {
 export default ProductInfo;
 
 const StyledBoxOneWorker = styled(Box)`
-  border: 2px solid red;
+  //border: 2px solid red;
   flex-grow: 1;
   margin: 0px 0;
   padding: 40px 40px;
@@ -116,26 +107,11 @@ const StyledBoxOneWorker = styled(Box)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //
-  // border-bottom: 2px solid;
-  // border-top: 2px solid;
-  // ${({ addVerticalOrHorizontalBorder, theme }) => css`
-  //  border-color: ${addVerticalOrHorizontalBorder ? theme.colors.colorLightFooter : "transparent"};
-  // `};
   @media (min-width: 1024px) {
     width: 31%;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px 20px;
-
-   //   border-bottom: 0px solid;
-   //   border-top: 0px solid;
-   //   border-left: 2px solid;
-   //   border-right: 2px solid;
-   //   ${({ addVerticalOrHorizontalBorder, theme }) => css`
-   //     // padding: ${addVerticalOrHorizontalBorder ? '0px 20px' : "0px 0px"};
-   //   border-color: ${addVerticalOrHorizontalBorder ? theme.colors.colorLightFooter : "transparent"};
-   // `};
+    padding: 0px 20px 40px 20px;
   }
   
   

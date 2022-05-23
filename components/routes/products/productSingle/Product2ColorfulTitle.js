@@ -2,10 +2,6 @@ import TitleAndText from "../../../../styles/TitleAndText"
 import Box from "../../../../styles/Box"
 import BoxColorFulBg from "../../../../styles/BoxColorFulBg"
 
-import styled from "styled-components";
-
-
-
 const Product2ColorfulTitle  = () => {
 
     return (

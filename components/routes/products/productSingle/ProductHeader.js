@@ -48,10 +48,10 @@ const ProductHeader  = () => {
                     </TitleAndText>
                 </Box>
                 <Box
-                        border={'purple 2px solid'}
+                        // border={'purple 2px solid'}
                        mb={60}
                 >
-                        <StyledImg src={`/chartImage2.png`} alt={"icon"} />
+                        <StyledImg src={`/Dashboard image.svg`} alt={"icon"} />
                 </Box>
                 <Box
                       mb={20}

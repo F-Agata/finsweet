@@ -1,21 +1,20 @@
 import Box from '../../styles/Box'
 
+import BtnsChoiceProduct from "../../components/BtnsChoiceProduct";
 import ProductsHeader from "../../components/routes/products/ProductsHeader";
 import GetTheBest from "../../components/routes/products/GetTheBest";
 import ChartsPage from "../../components/routes/products/ChartsPage";
 import Features from "../../components/routes/products/Features";
-import ProductHeader from "../../components/routes/products/productSingle/ProductHeader";
 import products from "../../components/routes/products/productSingle/productInfoItems";
-import BtnsChoiceProduct from "../../components/BtnsChoiceProduct";
 
 const Products = ({productInfoItems}) => {
 
-    console.log(productInfoItems)
+    console.log(productInfoItems, "productInfoItems - index.js dla products")
 
     return (
         <Box>
             <ProductsHeader/>
-            <BtnsChoiceProduct/>
+            <BtnsChoiceProduct productInfoItems={productInfoItems}/>
             <GetTheBest/>
             <ChartsPage/>
             <Features/>
@@ -25,8 +24,9 @@ const Products = ({productInfoItems}) => {
 
 export default Products;
 
-export async function getStaticProps(context) {
 
+
+export async function getStaticProps(context) {
 
     const productInfoItems = products
 
