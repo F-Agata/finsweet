@@ -6,9 +6,10 @@ import Box from "../styles/Box";
 import OneOptionOnePrice from "../components/routes/pricing/OneOptionOnePrice";
 import ChoiceMonthlyYearly from "../components/routes/pricing/ChoiceMonthlyYearly";
 import BtnsChoiceProduct from "../components/BtnsChoiceProduct";
+import products from "../components/routes/products/productSingle/productInfoItems";
 
 
-const Pricing = () => {
+const Pricing = ({productInfoItems}) => {
 
     const [isChoiceMonthly, setIsChoiceMonthly] = useState(false);
     const [isChoiceYearly, setIsChoiceYearly] = useState(true);
@@ -57,7 +58,7 @@ const Pricing = () => {
                 >
                     <OneOptionOnePrice pricingItems={pricingItems} isChoiceMonthly={isChoiceMonthly} isChoiceYearly={isChoiceYearly}/>
                 </Box>
-                <BtnsChoiceProduct/>
+                <BtnsChoiceProduct productInfoItems={productInfoItems}/>
 
             </Box>
         </Box>
@@ -65,6 +66,16 @@ const Pricing = () => {
 }
 
 export default Pricing;
+
+export async function getStaticProps(context) {
+
+    const productInfoItems = products
+
+    return {
+        props: {productInfoItems: productInfoItems}, // will be passed to the page component as props
+    }
+}
+
 
 const BoxStyledGradient1 = styled(Box)`
   position: absolute;
