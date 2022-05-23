@@ -5,7 +5,6 @@ import BoxColorFulBg from "../../../../styles/BoxColorFulBg"
 import styled from "styled-components";
 
 
-
 const ProductHeader  = () => {
 
     return (
@@ -49,7 +48,7 @@ const ProductHeader  = () => {
                     </TitleAndText>
                 </Box>
                 <Box
-                        // border={'purple 2px solid'}
+                        border={'purple 2px solid'}
                        mb={60}
                 >
                         <StyledImg src={`/chartImage2.png`} alt={"icon"} />

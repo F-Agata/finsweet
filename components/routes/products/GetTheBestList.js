@@ -20,7 +20,7 @@ const GetTheBestList = () => {
                 width={56}
                 hight={56}
             >
-                <img src={`/${item.icon}.svg`} alt={"icon"} />
+                <img src={`/products/${item.icon}.svg`} alt={"icon"} />
             </Box>
 
             <Box >

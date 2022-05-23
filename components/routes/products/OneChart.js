@@ -59,7 +59,7 @@ const OneCharts = () => {
                 // border={'blue 2px solid'}
                 width={{_: '100%', tablet: '70%', tabletL: '47%', }}
             >
-                <StyledChartImg src={`/${item.img}.png`} alt={"chart"} />
+                <StyledChartImg src={`/products/${item.img}.png`} alt={"chart"} />
             </Box>
         </Box>
     )});

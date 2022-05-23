@@ -15,14 +15,14 @@ const Workers = (  ) => {
                 <TitleAndText variant={'textLarge'}>{item.smallDescription}</TitleAndText>
             </Box>
             <Box
-                border={'blue 2px solid'}
+                // border={'blue 2px solid'}
                 overflow={'hidden'}
                 width={56}
                 height={56}
                 borderRadius={'50%'}
                 m={'25px 0 12px 0'}
             >
-                <img src={`/${item.icon}`} alt={"photo"} />
+                <img src={`/aboutUs/${item.icon}`} alt={"photo"} />
             </Box>
             <TitleAndText variant={'title4'}>{item.name}</TitleAndText>
             <TitleAndText variant={'textSmall'}>{item.jobTitle}</TitleAndText>

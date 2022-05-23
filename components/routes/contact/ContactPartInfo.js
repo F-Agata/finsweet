@@ -19,7 +19,7 @@ const ContactPartInfo = () => {
                 width={56}
                 hight={56}
             >
-                <img src={`/${item.icon}.png`} alt={"icon"} />
+                <img src={`/contact/${item.icon}.png`} alt={"icon"} />
             </Box>
 
             <Box>

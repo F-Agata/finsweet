@@ -21,7 +21,7 @@ const OneOptionOnePrice = ( { pricingItems, isChoiceMonthly, isChoiceYearly } ) 
                     alignSelf={'flex-start'}
                 >
                     <Box pr={24}>
-                        <img src={`/${item.icon}.png`} alt={"icon"}/>
+                        <img src={`/pricing/${item.icon}.png`} alt={"icon"}/>
                     </Box>
                     <Box textAlign={'left'}>
                         <TitleAndText variant={'title3'}>{item.title}</TitleAndText>
@@ -43,7 +43,7 @@ const OneOptionOnePrice = ( { pricingItems, isChoiceMonthly, isChoiceYearly } ) 
                              justifyContent={'left'}
                         >
                             <Box pr={20}>
-                                <img src={'/iconPricingList.svg'} alt={"icon"} />
+                                <img src={'/pricing/iconPricingList.svg'} alt={"icon"} />
                             </Box>
                             <TitleAndText variant={'textSmall'} textAlign={'left'}>{oneLine.infoName}</TitleAndText>
                         </Box>

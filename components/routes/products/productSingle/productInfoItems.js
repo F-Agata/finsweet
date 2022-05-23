@@ -1,4 +1,4 @@
-const productInfoItems = [
+const products = [
     { nameProduct: "product1",
        id:  "product1id",
       moreInfo:
@@ -86,4 +86,4 @@ const productInfoItems = [
         ]}
 ];
 
-export default productInfoItems
+export default products

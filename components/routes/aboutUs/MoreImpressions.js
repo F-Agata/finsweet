@@ -51,7 +51,7 @@ const MoreImpressions = () => {
                 <Box
                     // border={'green 2px solid'}
                      width={{_: '100%', tablet: '47%', }}>
-                    <StyledImgMoreImpressions src={`/imageMoreImpressions.png`} alt={"more impressions image"} />
+                    <StyledImgMoreImpressions src={`/aboutUs/imageMoreImpressions.png`} alt={"more impressions image"} />
                 </Box>
             </Box>
         </Box>

@@ -50,7 +50,7 @@ const FreeTrial  = () => {
                     </Box>
                     <Box
                         width={'100%'}
-                        border={'blue 2px solid'}
+                        // border={'blue 2px solid'}
                         borderRadius={24}
                         // p={'40px 40px'}
                         display={'flex'}
@@ -60,37 +60,37 @@ const FreeTrial  = () => {
                         alignItems={'center'}
                     >
                         <Box
-                            border={'purple 2px solid'}
+                            // border={'purple 2px solid'}
                             width={'325px'}
                             height={'288px'}
                             mb={20}
                             borderRadius={24}
                         >
-                            {/*<StyledTrialImg*/}
-                            {/*    // src={`/${item.icon}`}*/}
-                            {/*    alt={"icon"} />*/}
+                            <StyledTrialImg
+                                src={`/freeTrial/man-working-from-home-5198252.png`}
+                                alt={"photo"} />
                         </Box>
                         <Box
-                            border={'purple 2px solid'}
+                            // border={'purple 2px solid'}
                             width={'325px'}
                             height={'288px'}
                             mb={20}
                             borderRadius={24}
                         >
-                            {/*<StyledTrialImg*/}
-                            {/*    // src={`/${item.icon}`}*/}
-                            {/*    alt={"icon"} />*/}
+                            <StyledTrialImg
+                                src={`/freeTrial/people-working-in-front-of-the-computer-3184357.png`}
+                                alt={"photo"} />
                         </Box>
                         <Box
-                            border={'purple 2px solid'}
+                            // border={'purple 2px solid'}
                             width={'325px'}
                             height={'288px'}
                             mb={20}
                             borderRadius={24}
                         >
-                            {/*<StyledTrialImg*/}
-                            {/*    // src={`/${item.icon}`}*/}
-                            {/*    alt={"icon"} />*/}
+                            <StyledTrialImg
+                                src={`/freeTrial/person-using-macbook-pro-3861964.png`}
+                                alt={"photo"} />
                         </Box>
                       </Box>
                     <Box mt={20}>

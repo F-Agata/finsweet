@@ -17,18 +17,15 @@ const Features = () => {
                             addVerticalOrHorizontalBorder={addVerticalOrHorizontalBorder}
         >
             <Box
-                border={'blue 2px solid'}
+                // border={'blue 2px solid'}
                 width={53}
                 height={47}
                 mb={20}
             >
-                <img src={`/${item.icon}`} alt={"icon"} />
+                <img src={`/products/${item.icon}.svg`} alt={"icon"} />
             </Box>
             <Box
-                // border={'blue 2px solid'}
-                  // flexGrow={'1'}
-                // width={"100%"}
-                alignSelf={'stretch'}
+                 alignSelf={'stretch'}
             >
                 <TitleAndText variant={'title3'}
                               textAlign={{_: 'center', tabletL: 'left', }}
@@ -41,8 +38,6 @@ const Features = () => {
             <Box
                 // border={'blue 2px solid'}
                   flexGrow={'2'}
-                  // alignSelf={'flex-end'}
-                // alignSelf={'stretch'}
             >
             <TitleAndText variant={'textLarge'}
                           textAlign={{_: 'center', tabletL: 'left', }}
@@ -115,7 +110,6 @@ const StyledBoxOneWorker = styled(Box)`
      border-left: 2px solid;
      border-right: 2px solid;
      ${({ addVerticalOrHorizontalBorder, theme }) => css`
-       // padding: ${addVerticalOrHorizontalBorder ? '0px 20px' : "0px 0px"};
      border-color: ${addVerticalOrHorizontalBorder ? theme.colors.colorLightFooter : "transparent"};
    `};
   }

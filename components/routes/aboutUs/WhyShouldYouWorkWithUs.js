@@ -18,7 +18,7 @@ const WhyShouldYouWorkWithUs = () => {
                 // border={'pink 2px solid'}
                 pr={20}
             >
-                <img src={`iconArrowRight.svg`} alt={"icon"} />
+                <img src={`/aboutUs/iconArrowRight.svg`} alt={"icon"} />
             </Box>
 
             <Box >

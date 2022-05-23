@@ -13,7 +13,7 @@ const CompanyLogos = () => {
              m={20}
         >
             <Link href={`/#`}>
-                <StyledCompanyIcon src={`/${item}.png`} alt={"logo"} />
+                <StyledCompanyIcon src={`/aboutUs/${item}.png`} alt={"logo"} />
             </Link>
         </Box>
     ))

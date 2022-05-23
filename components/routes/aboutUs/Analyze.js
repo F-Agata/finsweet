@@ -18,7 +18,7 @@ const Analyze = () => {
                mr={20}
                width={72}
             >
-                <img src={`/${item.icon}.png`} alt={"icon"} />
+                <img src={`/aboutUs/${item.icon}.png`} alt={"icon"} />
             </Box>
 
             <Box >

@@ -5,6 +5,7 @@ import TitleAndText from "../styles/TitleAndText";
 import Box from "../styles/Box";
 import OneOptionOnePrice from "../components/routes/pricing/OneOptionOnePrice";
 import ChoiceMonthlyYearly from "../components/routes/pricing/ChoiceMonthlyYearly";
+import BtnsChoiceProduct from "../components/BtnsChoiceProduct";
 
 
 const Pricing = () => {
@@ -52,11 +53,11 @@ const Pricing = () => {
                     />
                 </Box>
                 <Box
-                     p={{_: '0px 40px ', tablet: '0px 40px', }}
+                     p={'0px 40px 40px 40px'}
                 >
                     <OneOptionOnePrice pricingItems={pricingItems} isChoiceMonthly={isChoiceMonthly} isChoiceYearly={isChoiceYearly}/>
-
                 </Box>
+                <BtnsChoiceProduct/>
 
             </Box>
         </Box>

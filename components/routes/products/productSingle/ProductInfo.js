@@ -6,13 +6,15 @@ import Link from "../../../../styles/Link";
 
 import productInfoItems from "./productInfoItems";
 
-const ProductInfo = () => {
+const ProductInfo = ({chosenProduct}) => {
 
-    const  productInfoItem = productInfoItems.map((item, index) => (
+    console.log('chosenProduct', chosenProduct)
 
-            <StyledBoxOneWorker key={item.id}
+    const  productInfoItem =
+
+            <StyledBoxOneWorker
             >
-                {item.moreInfo.map((oneInfo) => (
+                {chosenProduct.moreInfo.map((oneInfo) => (
                     <Box key={oneInfo.icon}>
                     <Box
                         border={'blue 2px solid'}
@@ -20,7 +22,7 @@ const ProductInfo = () => {
                         height={48}
                         mb={20}
                     >
-                        <img src={`/${oneInfo.icon}`} alt={"icon"} />
+                        <img src={`/productSingle/${oneInfo.icon}`} alt={"icon"} />
                     </Box>
                     <Box
                     // border={'blue 2px solid'}
@@ -53,7 +55,7 @@ const ProductInfo = () => {
 
             </StyledBoxOneWorker>
 
-        ));
+        ;
 
     return (
         <Box
