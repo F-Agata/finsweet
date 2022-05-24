@@ -181,8 +181,6 @@ const AllPosts  = () => {
 
 export default AllPosts ;
 
-
-
 const StyledImg = styled.img`
    border-radius: 24px;
     width: 100%;
