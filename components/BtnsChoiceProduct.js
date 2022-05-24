@@ -3,17 +3,12 @@ import Btn from "../styles/Btn";
 import TitleAndText from "../styles/TitleAndText"
 import Link from "../styles/Link"
 
-// import productInfoItems from "../components/routes/products/productSingle/productInfoItems"
-
-// {productInfoItems}
 const BtnsChoiceProduct = ({productInfoItems}) => {
-
-    console.log(productInfoItems, "productInfoItems dla BtnsChoice")
 
     const btnSingleToChoiceProducts = productInfoItems.map((item) => (
         <Box key={`${item.nameProduct}${item.nameProduct}`}>
             <Link href={`/products/${item.id}`}>
-                <Btn variant={'colorLightFromTheme'}  m={'0 auto'}>{item.nameProduct}</Btn>
+                <Btn variant={'colorLightFromTheme'}>{item.nameProduct}</Btn>
             </Link>
         </Box>
     ))
