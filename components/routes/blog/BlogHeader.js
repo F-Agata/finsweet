@@ -76,7 +76,3 @@ const BoxStyledGradient2 = styled(Box)`
   background: ${props => props.theme.gradients.gradientBlur};
   filter: blur(100px);
  `
-
-const StyledImgHeader = styled.img`
-    width: 100%;
-    `
