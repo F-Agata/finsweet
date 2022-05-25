@@ -19,7 +19,7 @@ export async function getStaticProps(context) {
 
 
     let listPostsItems;
-    console.log(listPostsItems, "listPostsItems w indexie bloga")
+    // console.log(listPostsItems, "listPostsItems w indexie bloga")
 
     await fetch("https://randomuser.me/api/?results=10")
         .then((res) => res.json())

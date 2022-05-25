@@ -5,7 +5,9 @@ import Link from "../../../styles/Link"
 
 
 
-const ReadMorePosts  = () => {
+const ReadMorePosts  = ({listPostsItems}) => {
+
+    console.log(listPostsItems, "listPostsItems w read more posts")
 
     return (
 

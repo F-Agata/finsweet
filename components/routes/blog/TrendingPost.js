@@ -20,7 +20,7 @@ const TrendingPost = ({listPostsItems}) => {
     return (
         <Box>
             {trendingPost &&
-            <Link href={`/blog/${trendingPost.email}`}>
+            <Link href={`/blog/${trendingPost.name.last}`}>
                 <Box
                     border={"2px solid"}
                     borderColor={'colorLight50'}
