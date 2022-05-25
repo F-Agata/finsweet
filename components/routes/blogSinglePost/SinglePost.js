@@ -9,7 +9,7 @@ const SinglePost = () => {
 
     return (
         <Box
-            border={'orange 2px solid'}
+            // border={'orange 2px solid'}
             m={'0 auto'}
             p={{_: '100px 0px 40px 0px', tablet: '150px 0px 40px 0px', }}
             textAlign={'center'}
@@ -49,7 +49,7 @@ const SinglePost = () => {
                 <Box
                     width={'100%'}
                     maxHeight={512}
-                    border={'orange 2px solid'}
+                    // border={'orange 2px solid'}
                     mb={20}
                     borderRadius={24}
                     overflow={'hidden'}

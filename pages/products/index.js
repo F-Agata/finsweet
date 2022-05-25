@@ -9,7 +9,7 @@ import Features from "../../components/routes/products/Features";
 
 const Products = ({productInfoItems}) => {
 
-    console.log(productInfoItems, "productInfoItems - index.js dla products")
+    // console.log(productInfoItems, "productInfoItems - index.js dla products")
 
     return (
         <Box>

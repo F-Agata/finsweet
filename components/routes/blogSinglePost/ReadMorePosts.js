@@ -69,108 +69,21 @@ const ReadMorePosts  = () => {
                                   textAlign={'left'}
                     >
                         New invoicing features to help you get paid faster
+                        {/*{trendingPost.location.city} new invoicing features*/}
                     </TitleAndText>
                     <TitleAndText variant={'textSmall'}
                                   mb={20}
                                   textAlign={'left'}
                     >
                         Over the past few months, we’ve added several new features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
+                        {/*{trendingPost.email}*/}
                     </TitleAndText>
                     <TitleAndText variant={'textSmall'}
                                   mb={20}
                                   textAlign={'left'}
                     >
                         autor, data
-                    </TitleAndText>
-
-                </Box>
-
-                <Box
-                    width={{_: '100%', tablet: '48%', tabletL: '31%', }}
-                    // border={'purple 2px solid'}
-                    mb={20}
-
-                    display={'flex'}
-                    flexDirection={'column'}
-                    justifyContent={'center'}
-                    alignItems={'center'}
-                >
-                    <Box
-                        // border={'orange 2px solid'}
-                        width={{_: '100%', mobileXM: '70%', mobileL: '50%', tablet: '100%', }}
-                        height={'256px'}
-                        mb={20}
-                        borderRadius={24}
-                        overflow={'hidden'}
-                    >
-                        <StyledImg
-                            src={`/freeTrial/person-using-macbook-pro-3861964.png`}
-                            alt={"photo"} />
-                    </Box>
-                    <TitleAndText
-                        // bg={'purple'}
-                        variant={'title4'}
-                        mb={20}
-                        textAlign={'left'}
-                    >
-                        New invoicing features to help you get paid faster
-                    </TitleAndText>
-                    <TitleAndText variant={'textSmall'}
-                                  mb={20}
-                                  textAlign={'left'}
-                        // bg={'purple'}
-                    >
-                        Over the past few months, we’ve added several new features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
-                    </TitleAndText>
-                    <TitleAndText variant={'textSmall'}
-                                  mb={20}
-                                  textAlign={'left'}
-                        // bg={'purple'}
-                    >
-                        autor, data
-                    </TitleAndText>
-
-                </Box>
-
-                <Box
-                    width={{_: '100%', tablet: '48%', tabletL: '31%', }}
-                    // border={'purple 2px solid'}
-                    mb={20}
-                    display={'flex'}
-                    flexDirection={'column'}
-                    justifyContent={'center'}
-                    alignItems={'center'}
-
-                >
-                    <Box
-                        // border={'orange 2px solid'}
-                        width={{_: '100%', mobileXM: '70%', mobileL: '50%', tablet: '100%', }}
-                        height={'256px'}
-                        mb={20}
-                        borderRadius={24}
-                        overflow={'hidden'}
-                    >
-                        <StyledImg
-                            src={`/freeTrial/people-working-in-front-of-the-computer-3184357.png`}
-                            alt={"photo"} />
-                    </Box>
-                    <TitleAndText variant={'title4'}
-                                  mb={20}
-                                  textAlign={'left'}
-                    >
-                        New invoicing features to help you get paid faster
-                    </TitleAndText>
-                    <TitleAndText variant={'textSmall'}
-                                  mb={20}
-                                  textAlign={'left'}
-                    >
-                        Over the past few months, we’ve added several new features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
-                    </TitleAndText>
-                    <TitleAndText variant={'textSmall'}
-                                  mb={20}
-                                  textAlign={'left'}
-                    >
-                        autor, data
+                        {/*{trendingPost.name.title} {trendingPost.name.first} {trendingPost.name.last} , data*/}
                     </TitleAndText>
 
                 </Box>

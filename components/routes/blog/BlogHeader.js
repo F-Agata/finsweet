@@ -1,3 +1,4 @@
+
 import styled, { css } from "styled-components";
 import TitleAndText from "../../../styles/TitleAndText";
 import Box from "../../../styles/Box";
@@ -7,7 +8,7 @@ import TrendingPost from "./TrendingPost";
 
 
 
-const BlogHeader = () => {
+const BlogHeader = ({listPostsItems}) => {
 
     return (
         <Box
@@ -47,7 +48,7 @@ const BlogHeader = () => {
                 <Box mb={42}
                      p={{_: '0px 40px ', tablet: '0px 40px', }}
                 >
-                    <TrendingPost/>
+                    <TrendingPost listPostsItems={listPostsItems}/>
                 </Box>
             </Box>
         </Box>
