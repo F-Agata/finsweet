@@ -7,9 +7,10 @@ import Link from "../../../styles/Link"
 
 
 
-const TrendingPost = ({listPostsItems}) => {
+const TrendingPost = ({listPostsItems,  listLinksToImg}) => {
 
     const [trendingPost, setTrendingPost] = useState(null)
+    console.log(listLinksToImg)
 
     useEffect(()=>{
         const randomNumber = (Math.floor(Math.random() * listPostsItems.length))
@@ -20,7 +21,7 @@ const TrendingPost = ({listPostsItems}) => {
     return (
         <Box>
             {trendingPost &&
-            <Link href={`/blog/${trendingPost.name.last}`}>
+            <Link href={`/blog/${trendingPost['ID Year']}`}>
                 <Box
                     border={"2px solid"}
                     borderColor={'colorLight50'}
@@ -30,6 +31,7 @@ const TrendingPost = ({listPostsItems}) => {
                     flexDirection={{_: 'column', tabletL: 'row',}}
                     justifyContent={{_: 'center', tabletL: 'space-between',}}
                     alignItems={{_: 'center', tabletL: 'center',}}
+                    cursor={'pointer'}
                 >
                         <Box
                             // border={'blue 2px solid'}
@@ -47,20 +49,22 @@ const TrendingPost = ({listPostsItems}) => {
                             <TitleAndText variant={'title2'}
                                           mb={20}
                                           mt={20}
-                            >
-                                {trendingPost.location.city} new invoicing features
+                            >{trendingPost['ID Year']}  ddd
+                                {listPostsItems.length} n
+                                ew invoicing features    {trendingPost['ID Nation']}
+
                             </TitleAndText>
                             <TitleAndText variant={'textSmall'}
                                           mb={20}
                             >
-                                Over the past few months, we’ve added several new features to SaaS Invoicing to help any
+                               Over the past {trendingPost.Population}  Over the past few months, we’ve added several new features to SaaS Invoicing to help any
                                 business
-                                get paid faster and streamline their collection workflows. {trendingPost.email}
+                                get paid faster and streamline their collection workflows.   {trendingPost.Population}
                             </TitleAndText>
                             <TitleAndText variant={'textSmall'}
                                           mb={20}
                             >
-                                {trendingPost.name.title} {trendingPost.name.first} {trendingPost.name.last} , data
+                                {trendingPost['ID Year']} {trendingPost['ID Nation']} {trendingPost['Slug Nation']} , data
                             </TitleAndText>
                         </Box>
                         <Box
@@ -71,7 +75,7 @@ const TrendingPost = ({listPostsItems}) => {
                             textAlign={'center'}
                             // textAlign={{_: 'center', tabletL: 'left', }}
                         >
-                            <StyledImg src={`${trendingPost.picture.large}`} alt={"photo"}/>
+                            <StyledImg src={listLinksToImg[0].picture.large} alt={"photo"}/>
                         </Box>
                 </Box>
             </Link>

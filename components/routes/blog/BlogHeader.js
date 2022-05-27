@@ -8,7 +8,7 @@ import TrendingPost from "./TrendingPost";
 
 
 
-const BlogHeader = ({listPostsItems}) => {
+const BlogHeader = ({listPostsItems,  listLinksToImg}) => {
 
     return (
         <Box
@@ -48,7 +48,7 @@ const BlogHeader = ({listPostsItems}) => {
                 <Box mb={42}
                      p={{_: '0px 40px ', tablet: '0px 40px', }}
                 >
-                    <TrendingPost listPostsItems={listPostsItems}/>
+                    <TrendingPost listPostsItems={listPostsItems}  listLinksToImg={ listLinksToImg}/>
                 </Box>
             </Box>
         </Box>

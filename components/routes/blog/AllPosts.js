@@ -5,23 +5,25 @@ import Link from "../../../styles/Link"
 
 
 
-const AllPosts  = ({listPostsItems}) => {
+const AllPosts  = ({listPostsItems, listLinksToImg}) => {
 
-    // console.log(listPostsItems, "listPostsItems w AllPosts")
-    // console.log(listPostsItems[1].email, "listPostsItems w AllPosts")
+    const allPostsToChoice = listPostsItems.map((item, index) => {
 
-    const allPostsToChoice = listPostsItems.map((item) => {
-        // console.log(item, 'item')
-        // console.log(item.name.last)
-
-        return (<Box key={item.name.last}
-            width={{_: '100%', tablet: '48%', tabletL: '31%', }}
-            // border={'purple 2px solid'}
-            mb={20}
+        return (
+            <Box key={item.Population}
+                 width={{_: '100%', tablet: '48%', tabletL: '31%', }}
+                 // border={'purple 2px solid'}
+                 mb={20}
+                 p={20}
+            >
+          <Link href={`/blog/${item['ID Year']}`}>
+            <Box
+            width={'100%'}
             display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
             alignItems={'center'}
+            cursor={'pointer'}
         >
             <Box
                 // border={'orange 2px solid'}
@@ -32,30 +34,33 @@ const AllPosts  = ({listPostsItems}) => {
                 overflow={'hidden'}
             >
                 <StyledImg
-                    src={`${item.picture.large}`}
+                    src={listLinksToImg[index].picture.large}
                     alt={"photo"} />
             </Box>
             <TitleAndText variant={'title4'}
                           mb={20}
                           textAlign={'left'}
             >
-                New invoicing features to help you get paid faster
-                {item.location.city} new invoicing features
+                {listPostsItems.length}   {item.Population} {listPostsItems.length}New invu get paid faster
+                {item['ID Nation']} new invoicing features
             </TitleAndText>
             <TitleAndText variant={'textSmall'}
                           mb={20}
                           textAlign={'left'}
             >
-                Over the past few months, we’ve added several new features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
-                {item.email}
+               Over the past {item.Population} few months, we’ve added several new {index } features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
+                {item.Population}
             </TitleAndText>
             <TitleAndText variant={'textSmall'}
                           mb={20}
                           textAlign={'left'}
             >
-                {item.name.title} {item.name.first} {item.name.last} , data
+                {item['ID Year']} {item['ID Nation']} {item['Slug Nation']} , data
             </TitleAndText>
-        </Box>)
+        </Box>
+          </Link>
+    </Box>
+    )
     })
 
     return (
@@ -67,7 +72,7 @@ const AllPosts  = ({listPostsItems}) => {
                  flexDirection={'column'}
                  justifyContent={'center'}
                  alignItems={'center'}
-                 p={'100px 40px 40px 40px'}
+                 p={'0px 40px 40px 40px'}
             >
                 <Box  mb={20}
                       maxWidth={846}
@@ -91,12 +96,10 @@ const AllPosts  = ({listPostsItems}) => {
                     alignItems={'center'}
                 >
                      {allPostsToChoice}
-
                 </Box>
-
             </Box>
     );
-}
+};
 
 export default AllPosts ;
 

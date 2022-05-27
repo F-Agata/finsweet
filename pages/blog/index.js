@@ -2,13 +2,15 @@ import Box from "../../styles/Box";
 
 import BlogHeader from "../../components/routes/blog/BlogHeader";
 import AllPosts from "../../components/routes/blog/AllPosts";
+import TryFetch from "../../components/routes/blogSinglePost/TryFetch";
 
-const Blog = ({listPostsItems}) => {
+const Blog = ({listPostsItems,  listLinksToImg}) => {
 
     return (
         <Box>
-            <BlogHeader listPostsItems={listPostsItems}/>
-            <AllPosts listPostsItems={listPostsItems}/>
+            <BlogHeader listPostsItems={listPostsItems}  listLinksToImg={ listLinksToImg}/>
+            <AllPosts listPostsItems={listPostsItems}  listLinksToImg={ listLinksToImg}/>
+            {/*<TryFetch/>*/}
         </Box>
     );
 }
@@ -19,17 +21,26 @@ export async function getStaticProps(context) {
 
 
     let listPostsItems;
+    let  listLinksToImg;
     // console.log(listPostsItems, "listPostsItems w indexie bloga")
 
-    await fetch("https://randomuser.me/api/?results=10")
+    await fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
         .then((res) => res.json())
         .then(data => {
             // console.log('data', data)
-            listPostsItems = data.results
+            listPostsItems = data.data
+        })
+        .catch (err => console.log(err));
+
+    await fetch("https://randomuser.me/api/?results=7")
+        .then((res) => res.json())
+        .then(data => {
+            // console.log('data props', data.data)
+            listLinksToImg = data.results
         })
         .catch (err => console.log(err));
 
     return {
-        props: {listPostsItems: listPostsItems}, // will be passed to the page component as props
+        props: {listPostsItems: listPostsItems,  listLinksToImg:  listLinksToImg}, // will be passed to the page component as props
     }
 }
