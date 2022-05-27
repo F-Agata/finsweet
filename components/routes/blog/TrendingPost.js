@@ -24,7 +24,7 @@ const TrendingPost = ({listPostsItems,  listLinksToImg}) => {
             <Link href={`/blog/${trendingPost['ID Year']}`}>
                 <Box
                     border={"2px solid"}
-                    borderColor={'colorLight50'}
+                    borderColor={'colorLight'}
                     borderRadius={24}
                     p={'40px 40px 20px 40px'}
                     display={'flex'}
@@ -71,18 +71,17 @@ const TrendingPost = ({listPostsItems,  listLinksToImg}) => {
                             borderRadius={'24px'}
                             overflow={'hidden'}
                             // border={'blue 2px solid'}
-                            width={{_: '100%', tablet: '70%', tabletL: '47%',}}
+                            width={{_: '80%', tablet: '60%', tabletL: '47%', laptopS: '40%', laptop: '35%'}}
                             textAlign={'center'}
-                            // textAlign={{_: 'center', tabletL: 'left', }}
                         >
-                            <StyledImg src={listLinksToImg[0].picture.large} alt={"photo"}/>
+                            <StyledImg src={listLinksToImg[7].picture.large} alt={"photo"}/>
                         </Box>
                 </Box>
             </Link>
             }
         </Box>
     );
-};
+}
 
 export default TrendingPost;
 

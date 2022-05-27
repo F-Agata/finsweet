@@ -67,7 +67,7 @@ export async function getStaticProps(context) {
     // console.log(chosenPost['ID Year'])
 
 
-    await fetch("https://randomuser.me/api/?results=7")
+    await fetch("https://randomuser.me/api/?results=8")
         .then((res) => res.json())
         .then(data => {
             // console.log('data props', data.data)

@@ -81,6 +81,7 @@ const StyledGrClose = styled(GrClose)`
     font-size: ${theme.fontSizes.fs4};
     font-weight: ${theme.fontWeights.fontBold};
     transition: 0.3s;
+    cursor: pointer;
   `};
   :hover  {
     transform: scale(1.3, 1.3);

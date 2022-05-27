@@ -75,7 +75,7 @@ const ReadMorePosts  = ({listPostsItems, listLinksToImg}) => {
             flexDirection={'column'}
             justifyContent={'center'}
             alignItems={'center'}
-            p={'100px 40px 40px 40px'}
+            p={'0px 40px 40px 40px'}
         >
             <Box  mb={20}
                   maxWidth={846}

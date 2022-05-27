@@ -66,11 +66,11 @@ export default Contact;
 
 const BoxStyledGradient = styled(Box)`
   position: absolute;
-  top: 40%;
-  left: 0%;
-  width: 555px;
-  height: 555px;
+  top: 10%;
+  left: -10%;
+  width: 755px;
+  height: 755px;
   border-radius: 490px;
   background: ${props => props.theme.gradients.gradientBlur};
-  filter: blur(150px);
+  filter: blur(100px);
  `

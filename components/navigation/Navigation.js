@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import styled, { css } from "styled-components";
 import { useMediaQuery } from 'react-responsive'
 import {FaBars} from "react-icons/fa";
@@ -57,6 +57,7 @@ const BoxNavigation = styled(Box)`
 `
 
 const StyledFaBars = styled(FaBars)`
+  cursor: pointer;
   ${({ theme }) => css`
     background-color: ${theme.colors.colorWhite};
     color: ${theme.colors.colorPrimary};

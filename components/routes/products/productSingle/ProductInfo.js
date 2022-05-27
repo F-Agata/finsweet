@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import styled, { css } from "styled-components";
 import TitleAndText from "../../../../styles/TitleAndText"
 import Box from "../../../../styles/Box"
@@ -7,6 +8,8 @@ import Link from "../../../../styles/Link";
 import productInfoItems from "./productInfoItems";
 
 const ProductInfo = ({chosenProduct}) => {
+
+    const router = useRouter()
 
     const  productInfoItem =  chosenProduct.moreInfo.map((oneInfo) => (
         <StyledBoxOneWorker key={oneInfo.icon}
@@ -34,10 +37,7 @@ const ProductInfo = ({chosenProduct}) => {
                 </TitleAndText>
             </Box>
             <Box
-                // border={'blue 2px solid'}
                 flexGrow={'2'}
-                // alignSelf={'flex-end'}
-                // alignSelf={'stretch'}
             >
                 <TitleAndText variant={'textLarge'}
                               textAlign={{_: 'center', tabletL: 'left', }}
@@ -91,6 +91,19 @@ const ProductInfo = ({chosenProduct}) => {
             </Box>
             <Box>
                 <Link href={`/pricing`}><Btn variant="dark" mt={40}> Pricing</Btn></Link>
+            </Box>
+            <Box
+                maxWidth={846}
+                p={{_: '0px 40px ', tablet: '0px 60px', }}
+                display={'flex'}
+                flexDirection={'column'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                mt={20}
+            >
+                {/*<Link href={`/products`}> */}
+                    <Btn variant={'dark'} onClick={() => router.back()} >Wróć do poprzedniej strony</Btn>
+                {/*</Link>*/}
             </Box>
         </Box>
     );

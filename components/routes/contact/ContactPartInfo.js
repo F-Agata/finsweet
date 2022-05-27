@@ -1,6 +1,8 @@
 import TitleAndText from "../../../styles/TitleAndText"
 import Box from "../../../styles/Box"
 import partInfoItems from '../contact/partInfoItems';
+import Link from "../../../styles/Link";
+import Btn from "../../../styles/Btn";
 
 
 const ContactPartInfo = () => {
@@ -51,6 +53,19 @@ const ContactPartInfo = () => {
             alignItems={{_: 'center', tablet: 'center', tabletL: 'flex-start' }}
         >
             {partInfoItem}
+            <Box
+                width={"100%"}
+                mt={20}
+                // border={'orange 2px solid'}
+                // p={{_: '0px 40px ', tablet: '0px 60px', }}
+                // display={'flex'}
+                // flexDirection={'column'}
+                // justifyContent={'center'}
+                // alignItems={'center'}
+            >
+                <Link href={`/faq`}><Btn variant={'dark'} width={'100%'} m={0}>FAQ</Btn></Link>
+            </Box>
+
         </Box>
     );
 }
