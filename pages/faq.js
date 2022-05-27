@@ -3,42 +3,21 @@ import styled, { css } from "styled-components";
 import TitleAndText from "../styles/TitleAndText";
 import Box from "../styles/Box";
 
-import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai";
+import BoxSingleQuestion from "../components/routes/faq/BoxSingleQuestion";
 
 import faqItems from "../components/routes/faq/faqItems";
 
 
 const Faq = (  ) => {
 
-    // const [smallNavIsOpen, setSmallNavIsOpen] = useState(false)
-    //
-    //    const changeNav = () => {
-    //     setSmallNavIsOpen(!smallNavIsOpen)
-    // }
+    const faqItem = faqItems.map((item, index) => (
 
-    const faqItem = faqItems.map((item) => (
-
-        <StyledBoxSingleQuestion key={item.question}>
-            <Box
-                width={'100%'}
-                // border={'green 2px solid'}
-                display={'flex'}
-                justifyContent={'space-between'}
-                alignItems={'center'}
-                mb={20}
-                // p={'20px  0 0 20px'}
-            >
-                <TitleAndText variant={'title4'} textAlign={'left'}>{item.question}</TitleAndText>
-                <Box
-                    pl={40}>
-                    <StyledAiOutlinePlus
-                        // onClick={changeNav}
-                    />
-                </Box>
-            </Box>
-           <TitleAndText variant={'textSmall'} p={'20px 40px'}>{item.smallDescription}</TitleAndText>
-        </StyledBoxSingleQuestion>
-
+        <BoxSingleQuestion
+            key={item.question}
+            question={item.question}
+            smallDescription={item.smallDescription}
+            opened={index === 0}
+        />
     ));
 
     return (
@@ -88,55 +67,5 @@ const Faq = (  ) => {
 };
 
 export default Faq;
-
-const StyledBoxSingleQuestion = styled(Box)`
-  border: 2px solid;
-  border-color: ${props => props.theme.colors.colorLight};
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 24px;
-  margin: 20px 0;
-  padding: 20px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  @media (min-width: 768px) {
-    margin: 0px 0px 20px 0px ;
-  }
-`
-
-  const StyledAiOutlinePlus = styled(AiOutlinePlus)`
-     width: 34px;
-    height: 34px;
-  ${({theme}) => css`
-    background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorPrimary};
-    line-height: ${theme.lineHeight.lh4};
-    font-size: ${theme.fontSizes.fs4};
-    font-weight: ${theme.fontWeights.fontBold};
-    transition: 0.3s;
-    cursor: pointer;
-  `};
-  :hover  {
-    transform: scale(1.3, 1.3);
-  }`
-
-const StyledAiOutlineMinus = styled(AiOutlineMinus)`
-  width: 34px;
-  height: 34px;
-  ${({theme}) => css`
-    background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorPrimary};
-    line-height: ${theme.lineHeight.lh4};
-    font-size: ${theme.fontSizes.fs4};
-    font-weight: ${theme.fontWeights.fontBold};
-    transition: 0.3s;
-    cursor: pointer;
-  `};
-  :hover  {
-    transform: scale(1.3, 1.3);
-  }`
-
 
 
