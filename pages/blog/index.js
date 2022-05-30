@@ -1,8 +1,7 @@
-import Box from "../../../../styles/Box";
+import Box from "../../styles/Box";
 
-import BlogHeader from "../BlogHeader";
-import AllPosts from "../AllPosts";
-import TryFetch from "../../components/routes/blogSinglePost/TryFetch";
+import BlogHeader from "../../components/routes/blog/BlogHeader";
+import AllPosts from "../../components/routes/blog/AllPosts";
 
 const Blog = ({listPostsItems,  listLinksToImg}) => {
 
@@ -10,7 +9,6 @@ const Blog = ({listPostsItems,  listLinksToImg}) => {
         <Box>
             <BlogHeader listPostsItems={listPostsItems}  listLinksToImg={ listLinksToImg}/>
             <AllPosts listPostsItems={listPostsItems}  listLinksToImg={ listLinksToImg}/>
-            {/*<TryFetch/>*/}
         </Box>
     );
 }

@@ -21,7 +21,7 @@ function FormPanel({submittedForm}) {
                 flexDirection={{_: 'column', tablet: 'row', }}
                 justifyContent={{ _: 'center',tablet: 'space-between', }}
                 flexWrap={"wrap"}
-                alignItems={'center'}
+                alignItems={{ _: 'center',tablet: 'flex-start', }}
             >
                 <Box
                     width={{_: '100%', tablet: '47%', }}

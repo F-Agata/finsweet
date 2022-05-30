@@ -55,7 +55,7 @@ const StyledAiOutlinePlus = styled(AiOutlinePlus)`
     height: 34px;
   ${({theme}) => css`
     background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorPrimary};
+    color: ${theme.colors.colorIcon};
     line-height: ${theme.lineHeight.lh4};
     font-size: ${theme.fontSizes.fs4};
     font-weight: ${theme.fontWeights.fontBold};
@@ -71,7 +71,7 @@ const StyledAiOutlineMinus = styled(AiOutlineMinus)`
   height: 34px;
   ${({theme}) => css`
     background-color: ${theme.colors.colorWhite};
-    color: ${theme.colors.colorPrimary};
+    color: ${theme.colors.colorIcon};
     line-height: ${theme.lineHeight.lh4};
     font-size: ${theme.fontSizes.fs4};
     font-weight: ${theme.fontWeights.fontBold};

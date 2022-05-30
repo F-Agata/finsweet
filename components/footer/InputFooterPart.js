@@ -41,8 +41,6 @@ export default InputFooterPart;
 const FormStyledFooter = styled.form`
   //border: crimson 2px solid;
   flex-grow: 1;
-  //min-width: 360px;
-  //max-width: 450px;
 width: 360px;
   display: flex;
   flex-direction: row;
@@ -57,10 +55,7 @@ width: 360px;
 
 const InputStyledFooter = styled.input`
   flex-grow: 1;
-  //min-width: 360px;
-  //max-width: 450px;
-  width: 450px;
-    width: 100%;
+     width: 100%;
     height: 60px;
     padding: 16px 177px 16px 22px;
     border-radius: 12px;

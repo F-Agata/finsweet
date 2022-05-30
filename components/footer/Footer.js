@@ -37,7 +37,7 @@ const Footer = () => {
 
             <Box          maxWidth={1440}
                           width={'100%'}
-                          p={{_: '34px 40px 34px 40px', tablet: '64px 80px 64px 80px', }}
+                          p={{_: '34px 40px 80px 40px', tablet: '64px 80px 64px 80px', }}
                           bg={'colorPrimary'}
                           display={'flex'}
                           flexDirection={'column'}
@@ -72,7 +72,7 @@ const Footer = () => {
                         // border={'purple 2px solid'}
                          display={'flex'}
                          flexDirection={'column'}
-                         alignItems={{_: 'center', tablet: 'flex-start', }}
+                         alignItems={{_: 'center', tabletL: 'flex-start', }}
                     >
                        <TitleAndText variant={'title5'} color={"colorWhite"} mt={{_: '0px', tablet: '32px', }} mb={16}>Subscribe to our Newsletter</TitleAndText>
                        <InputFooterPart/>

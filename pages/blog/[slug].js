@@ -1,6 +1,6 @@
-import Box from "../../../../styles/Box";
-import SinglePost from "../../blogSinglePost/SinglePost";
-import ReadMorePosts from "../../blogSinglePost/ReadMorePosts";
+import Box from "../../styles/Box";
+import SinglePost from "../../components/routes/blogSinglePost/SinglePost";
+import ReadMorePosts from "../../components/routes/blogSinglePost/ReadMorePosts";
 
 const ChoicePost = ({chosenPost, listPostsItems,  listLinksToImg }) => {
 

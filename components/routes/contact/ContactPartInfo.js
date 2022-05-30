@@ -45,23 +45,17 @@ const ContactPartInfo = () => {
         <Box
             // border={'orange 2px solid'}
             width={{_: '100%', tabletL: '33%', }}
-            mt={{_: '40px', tabletL: '0px', }}
+            mt={{_: '20px', tablet: '60px', tabletL: '0px', }}
             display={'flex'}
             flexWrap={'wrap'}
             flexDirection={{_: 'column', tablet: 'row', tabletL: 'column' }}
-            justifyContent={{_: 'center', tablet: 'space-evenly', tabletL: 'center' }}
+            justifyContent={{_: 'center', tablet: 'space-evenly', tabletL: 'flex-end' }}
             alignItems={{_: 'center', tablet: 'center', tabletL: 'flex-start' }}
         >
             {partInfoItem}
             <Box
                 width={"100%"}
                 mt={20}
-                // border={'orange 2px solid'}
-                // p={{_: '0px 40px ', tablet: '0px 60px', }}
-                // display={'flex'}
-                // flexDirection={'column'}
-                // justifyContent={'center'}
-                // alignItems={'center'}
             >
                 <Link href={`/faq`}><Btn variant={'dark'} width={'100%'} m={0}>FAQ</Btn></Link>
             </Box>
