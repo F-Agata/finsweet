@@ -3,26 +3,22 @@ import React, { useState, useEffect } from "react";
 const useForm = (validationRules, submittedForm) => {
     const [values, setValues] = useState({
         username: "",
+        company: "",
         email: "",
         message: "",
-        accept: false,
+        subject: "",
     });
 
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false)
 
     const handleChange = (e) => {
-        const { type, name, value, checked } = e.target;
+        const { type, name, value, } = e.target;
 
         if (type === "text" || type === "email" || type === "textarea") {
             setValues({
                 ...values,
                 [name]: value,
-            });
-        } else if (type === "checkbox") {
-            setValues({
-                ...values,
-                [name]: checked,
             });
         }
     };
@@ -31,23 +27,6 @@ const useForm = (validationRules, submittedForm) => {
         e.preventDefault();
         setErrors(validationRules(values));
         setIsSubmitting(true)
-
-        const handleSendForm = async () => {
-            const res = await fetch("/api/sendgrid", {
-                body: JSON.stringify({
-                    email: values.email,
-                    fullname: values.username,
-                    subject: "e-mail from: rubinowe@rubinowe.pl",
-                    message: values.message,
-                }),
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                method: "POST",
-            });
-        }
-
-        handleSendForm();
     };
 
     useEffect(
@@ -55,10 +34,11 @@ const useForm = (validationRules, submittedForm) => {
             if (Object.keys(errors).length === 0 && isSubmitting) {
                 submittedForm();
                 setValues({
-                    username: '',
-                    email: '',
-                    message: '',
-                    agreement: false,
+                    username: "",
+                    company: "",
+                    email: "",
+                    message: "",
+                    subject: "",
                 })
                 setIsSubmitting(false)
             }

@@ -45,8 +45,7 @@ const ReadMorePosts  = ({listPostsItems, listLinksToImg}) => {
                                       mb={20}
                                       textAlign={'left'}
                         >
-                            {item['ID Year']}  new invoicing features {item.Population} {showFewPosts.length}New invu get paid faster
-                            {item['ID Nation']} new invoicing features
+                            {item['ID Year']}  This is a blog post.  Over the past.
                         </TitleAndText>
                         <TitleAndText variant={'textSmall'}
                                       mb={20}
@@ -59,7 +58,7 @@ const ReadMorePosts  = ({listPostsItems, listLinksToImg}) => {
                                       mb={20}
                                       textAlign={'left'}
                         >
-                            {item['ID Year']} {item['ID Nation']} {item['Slug Nation']} , data
+                            {item['ID Year']} {item['ID Nation']} {item['Slug Nation']}
                         </TitleAndText>
                     </Box>
                 </Link>

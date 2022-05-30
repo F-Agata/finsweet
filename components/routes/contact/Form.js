@@ -25,7 +25,9 @@ const Form = () => {
                 width={'100%'}
             >
                 <FormPanel submittedForm={submittedForm} />
-                {isSubmited && <TitleAndText variant={'textSmall'}> Twoja wiadomość została wysłana. Odpowiemy na nią najszybciej jak to możliwe</TitleAndText>}
+                {isSubmited &&
+                <TitleAndText variant={'textLarge'} color={'colorIcon'} m={"20px 0"} textAlign={'center'}>Twoja wiadomość została wysłana. Odpowiemy na nią najszybciej jak to możliwe</TitleAndText>
+                }
             </Box>
         </>
     )

@@ -1,10 +1,10 @@
-import Box from '../../styles/Box'
+import Box from '../../../../styles/Box'
 
-import BtnsChoiceProduct from "../../components/BtnsChoiceProduct";
-import ProductsHeader from "../../components/routes/products/ProductsHeader";
-import GetTheBest from "../../components/routes/products/GetTheBest";
-import ChartsPage from "../../components/routes/products/ChartsPage";
-import Features from "../../components/routes/products/Features";
+import BtnsChoiceProduct from "../../../BtnsChoiceProduct";
+import ProductsHeader from "../../products/ProductsHeader";
+import GetTheBest from "../../products/GetTheBest";
+import ChartsPage from "../../products/ChartsPage";
+import Features from "../../products/Features";
 // import products from "../../components/routes/products/productSingle/productInfoItems";
 
 const Products = ({productInfoItems}) => {

@@ -1,71 +1,30 @@
-import React, { useState, useEffect } from "react";
+const validationRules = (values) => {
+    let errors = {};
 
-const useForm = (validationRules, submittedForm) => {
-    const [values, setValues] = useState({
-        username: "",
-        email: "",
-        message: "",
-        accept: false,
-    });
+    if (!values.username.trim()) {
+        errors.username = "podaj imię";
+    }
+    if (!values.company.trim()) {
+        errors.company = "wpisz nazwę firmy";
+    }
 
-    const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false)
+    if (!values.email.trim()) {
+        errors.email = "podaj email";
+    } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+        errors.email = "email zawiera nieprawidłowe znaki i/lub nie zawiera @";
+    }
 
-    const handleChange = (e) => {
-        const { type, name, value, checked } = e.target;
+    if (!values.message.trim()) {
+        errors.message = "wpisz treść";
+    } else if (values.message.length < 6) {
+        errors.message = "treść jest zbyt krótka";
+    }
 
-        if (type === "text" || type === "email" || type === "textarea") {
-            setValues({
-                ...values,
-                [name]: value,
-            });
-        } else if (type === "checkbox") {
-            setValues({
-                ...values,
-                [name]: checked,
-            });
-        }
-    };
+    if (!values.subject.trim()) {
+        errors.subject = "wpisz temat wiadomości";
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setErrors(validationRules(values));
-        setIsSubmitting(true)
-
-        const handleSendForm = async () => {
-            const res = await fetch("/api/sendgrid", {
-                body: JSON.stringify({
-                    email: values.email,
-                    fullname: values.username,
-                    subject: "e-mail from: rubinowe@rubinowe.pl",
-                    message: values.message,
-                }),
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                method: "POST",
-            });
-        }
-
-        handleSendForm();
-    };
-
-    useEffect(
-        () => {
-            if (Object.keys(errors).length === 0 && isSubmitting) {
-                submittedForm();
-                setValues({
-                    username: '',
-                    email: '',
-                    message: '',
-                    agreement: false,
-                })
-                setIsSubmitting(false)
-            }
-        }
-    )
-
-    return { values, errors, handleChange, handleSubmit };
+    return errors;
 };
 
-export default useForm;
+export default validationRules;

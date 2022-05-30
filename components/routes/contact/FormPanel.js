@@ -13,11 +13,8 @@ function FormPanel({submittedForm}) {
     const { values, errors, handleChange, handleSubmit } =
         useForm(validationRules, submittedForm);
 
-    // useEffect(()=>{console.log(values.accept)},[])
-
     return (
         <WrappPanel onSubmit={handleSubmit} noValidate>
-
             <Box
                 // border={'purple 2px solid'}
                 display={'flex'}
@@ -25,7 +22,6 @@ function FormPanel({submittedForm}) {
                 justifyContent={{ _: 'center',tablet: 'space-between', }}
                 flexWrap={"wrap"}
                 alignItems={'center'}
-
             >
                 <Box
                     width={{_: '100%', tablet: '47%', }}
@@ -39,26 +35,23 @@ function FormPanel({submittedForm}) {
                         value={values.username}
                         onChange={handleChange}
                     />
-                    {errors.username && <TitleAndText>{errors.username}</TitleAndText>}
+                    {errors.username && <TitleAndText variant={'textLarge'} color={'colorIcon'} m={"10px 0"} textAlign={'right'}>{errors.username}</TitleAndText>}
                 </Box>
-
                 <Box
                     width={{_: '100%', tablet: '47%', }}
                     mb={10}
                 >
                     <InputF
                         type={"text"}
-                        id={"username"}
-                        name={"username"}
+                        id={"company"}
+                        name={"company"}
                         placeholder={"write company name..."}
-                        value={values.username}
+                        value={values.company}
                         onChange={handleChange}
                     />
-                    {errors.username && <TitleAndText>{errors.username}</TitleAndText>}
+                    {errors.company && <TitleAndText variant={'textLarge'} color={'colorIcon'} m={"10px 0"} textAlign={'right'}>{errors.company}</TitleAndText>}
                 </Box>
             </Box>
-
-
             <Box
                 // border={'purple 2px solid'}
                 mb={10}
@@ -71,23 +64,21 @@ function FormPanel({submittedForm}) {
                     value={values.email}
                     onChange={handleChange}
                 />
-                {errors.email && <TitleAndText>{errors.email}</TitleAndText>}
+                {errors.email && <TitleAndText variant={'textLarge'} color={'colorIcon'} m={"10px 0"} textAlign={'right'} >{errors.email}</TitleAndText>}
             </Box>
-
             <Box
                 mb={10}
             >
                 <InputF
                     type={"text"}
-                    id={"username"}
-                    name={"username"}
+                    id={"subject"}
+                    name={"subject"}
                     placeholder={"write subject..."}
-                    value={values.username}
+                    value={values.subject}
                     onChange={handleChange}
                 />
-                {errors.username && <TitleAndText>{errors.username}</TitleAndText>}
+                {errors.subject && <TitleAndText variant={'textLarge'} color={'colorIcon'} m={"10px 0"} textAlign={'right'}>{errors.subject}</TitleAndText>}
             </Box>
-
             <Box
                 mb={10}
             >
@@ -99,9 +90,8 @@ function FormPanel({submittedForm}) {
                     value={values.message}
                     onChange={handleChange}
                 />
-                {errors.message && <TitleAndText>{errors.message}</TitleAndText>}
+                {errors.message && <TitleAndText variant={'textLarge'} color={'colorIcon'} m={"10px 0"} textAlign={'right'} >{errors.message}</TitleAndText>}
             </Box>
-
             <Btn variant={'dark'}
                  type={"submit"}
                  m={0}

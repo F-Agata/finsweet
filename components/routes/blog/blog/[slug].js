@@ -1,18 +1,16 @@
-import Box from "../../styles/Box";
-import SinglePost from "../../components/routes/blogSinglePost/SinglePost";
-import ReadMorePosts from "../../components/routes/blogSinglePost/ReadMorePosts";
-import TryFetch from "../../components/routes/blogSinglePost/TryFetch";
+import Box from "../../../../styles/Box";
+import SinglePost from "../../blogSinglePost/SinglePost";
+import ReadMorePosts from "../../blogSinglePost/ReadMorePosts";
 
 const ChoicePost = ({chosenPost, listPostsItems,  listLinksToImg }) => {
 
-    console.log('chosenPost', chosenPost)
+    // console.log('chosenPost', chosenPost)
     // console.log(listPostsItems)
 
     return (
         <Box>
             {chosenPost && <SinglePost chosenPost={chosenPost} listLinksToImg={listLinksToImg}/>}
             {listPostsItems && <ReadMorePosts listPostsItems={listPostsItems} listLinksToImg={listLinksToImg}/>}
-            {/*<TryFetch/>*/}
         </Box>
     );
 }

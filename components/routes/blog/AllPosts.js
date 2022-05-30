@@ -41,21 +41,20 @@ const AllPosts  = ({listPostsItems, listLinksToImg}) => {
                           mb={20}
                           textAlign={'left'}
             >
-                {listPostsItems.length}   {item.Population} {listPostsItems.length}New invu get paid faster
-                {item['ID Nation']} new invoicing features
+                {item['ID Year']} New invoicing features to help you get paid faster
             </TitleAndText>
             <TitleAndText variant={'textSmall'}
                           mb={20}
                           textAlign={'left'}
             >
-               Over the past {item.Population} few months, we’ve added several new {index } features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
+               Over the past {item.Population} few months,  {listPostsItems.length}  we’ve added several new {index } features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
                 {item.Population}
             </TitleAndText>
             <TitleAndText variant={'textSmall'}
                           mb={20}
                           textAlign={'left'}
             >
-                {item['ID Year']} {item['ID Nation']} {item['Slug Nation']} , data
+                {item['ID Year']} {item['ID Nation']} {item['Slug Nation']}
             </TitleAndText>
         </Box>
           </Link>

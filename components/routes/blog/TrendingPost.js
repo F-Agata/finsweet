@@ -49,22 +49,19 @@ const TrendingPost = ({listPostsItems,  listLinksToImg}) => {
                             <TitleAndText variant={'title2'}
                                           mb={20}
                                           mt={20}
-                            >{trendingPost['ID Year']}  ddd
-                                {listPostsItems.length} n
-                                ew invoicing features    {trendingPost['ID Nation']}
-
+                            >
+                                {trendingPost['ID Year']} New invoicing features to help you get paid faster
                             </TitleAndText>
                             <TitleAndText variant={'textSmall'}
                                           mb={20}
                             >
                                Over the past {trendingPost.Population}  Over the past few months, we’ve added several new features to SaaS Invoicing to help any
-                                business
-                                get paid faster and streamline their collection workflows.   {trendingPost.Population}
+                                business {listPostsItems.length} get paid faster and streamline their collection workflows.   {trendingPost.Population}
                             </TitleAndText>
                             <TitleAndText variant={'textSmall'}
                                           mb={20}
                             >
-                                {trendingPost['ID Year']} {trendingPost['ID Nation']} {trendingPost['Slug Nation']} , data
+                                {trendingPost['ID Year']} {trendingPost['ID Nation']} {trendingPost['Slug Nation']}
                             </TitleAndText>
                         </Box>
                         <Box

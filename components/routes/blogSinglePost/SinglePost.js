@@ -44,7 +44,7 @@ const SinglePost = ({chosenPost, listLinksToImg}) => {
                     </TitleAndText>
                     <TitleAndText variant={'textSmall'} mb={32}
                     >
-                        {chosenPost['ID Year']} {chosenPost['ID Nation']} {chosenPost['Slug Nation']} , data
+                        {chosenPost['ID Year']} {chosenPost['ID Nation']} {chosenPost['Slug Nation']}
                     </TitleAndText>
                 </Box>
                 <Box

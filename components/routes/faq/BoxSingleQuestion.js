@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import styled, {css} from "styled-components";
 import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 
+
 const BoxSingleQuestion = ({question, smallDescription, opened = false}) => {
 
     const [isOpen, setIsOpen] = useState(opened);

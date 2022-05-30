@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import styled, { css } from "styled-components";
 import TitleAndText from "../styles/TitleAndText";
 import Box from "../styles/Box";
+import BoxColorFulBg from "../styles/BoxColorFulBg";
 
 import BoxSingleQuestion from "../components/routes/faq/BoxSingleQuestion";
 
@@ -36,11 +37,15 @@ const Faq = (  ) => {
             <Box
                 // border={'blue 2px solid'}
                 width={{_: '100%', tablet: '38%',}}
-                textAlign={{_: 'center', tabletL: 'left',}}
+                textAlign={{_: 'center', tablet: 'left',}}
                 mb={20}
                 p={'0px 40px'}
             >
-                <TitleAndText variant={'title2'} mb={20}>Frequestly Asked Questions</TitleAndText>
+                <TitleAndText variant={'title2'}
+                              mb={20}
+                >
+                    Frequestly Asked Questions
+                </TitleAndText>
                 <TitleAndText variant={'textSmall'}
                               mb={20}
                 >
@@ -51,7 +56,7 @@ const Faq = (  ) => {
             <Box
                 // border={'yellow 2px solid'}
                 width={{_: '100%', tablet: '60%',}}
-                textAlign={{_: 'center', tablet: 'left',}}
+                // textAlign={{_: 'center', tablet: 'left',}}
                 p={'0px 40px'}
                 textAlign={'center'}
                 display={'flex'}
