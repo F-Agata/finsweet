@@ -1,26 +1,30 @@
 {
-  "name": "figma01",
+  "name": "finsweet-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "db": "json-server --watch db.json -p 4000"
+    "db": "json-server --watch db.json -p 4000",
+    "lint": "next lint --fix",
+    "prettier": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
     "json-server": "^0.17.0",
-    "next": "12.1.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "react-responsive": "8.0.0-beta.1",
+    "next": "12.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-responsive": "^9.0.0-beta.10",
     "styled-components": "^5.3.5",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.4"
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
+    "prettier": "2.7.1"
   }
 }

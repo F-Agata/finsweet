@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@400;700&display=swap');
@@ -24,5 +24,5 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box !important;
         font-family:  'Roboto', sans-serif;
       }
-`;
-export default GlobalStyle;
+`
+export default GlobalStyle

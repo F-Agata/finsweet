@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Image from "next/image";
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import Image from 'next/image'
 
-import arrow from "../public/iconUpArrow.svg";
+import arrow from '../public/iconUpArrow.svg'
 
 const GoToTopOfPage = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [showArrow, setShowArrow] = useState(false);
+  const [scrollY, setScrollY] = useState(0)
+  const [showArrow, setShowArrow] = useState(false)
 
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const toggleArrow = () => {
-    setScrollY(window.pageYOffset);
+    setScrollY(window.pageYOffset)
     if (scrollY > 100) {
-      setShowArrow(true);
-    } else setShowArrow(false);
-  };
+      setShowArrow(true)
+    } else setShowArrow(false)
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleArrow);
-    return () => window.removeEventListener("scroll", toggleArrow);
-  }, [scrollY, showArrow]);
+    window.addEventListener('scroll', toggleArrow)
+    return () => window.removeEventListener('scroll', toggleArrow)
+  }, [scrollY, showArrow])
 
   return (
     <>
@@ -35,10 +35,10 @@ const GoToTopOfPage = () => {
         </WrappGoToTopOfPage>
       ) : null}
     </>
-  );
-};
+  )
+}
 
-export default GoToTopOfPage;
+export default GoToTopOfPage
 const WrappGoToTopOfPage = styled.div`
   width: 50px;
   height: 50px;
@@ -52,7 +52,7 @@ const WrappGoToTopOfPage = styled.div`
   z-index: 10;
   overflow: hidden;
   background-color: ${(props) => props.theme.colors.colorWhite};
-`;
+`
 
 const BackgraundButtonArrow = styled.div`
   width: 50px;
@@ -66,7 +66,7 @@ const BackgraundButtonArrow = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 11;
-`;
+`
 
 const WrappArrow = styled.div`
   width: 24px;
@@ -79,5 +79,4 @@ const WrappArrow = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 12;
-`;
-
+`
