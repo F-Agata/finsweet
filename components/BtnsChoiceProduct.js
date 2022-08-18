@@ -14,7 +14,6 @@ const BtnsChoiceProduct = ({ productInfoItems }) => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       p={' 0px 40px '}
       textAlign={'center'}
       display={'flex'}
@@ -22,11 +21,7 @@ const BtnsChoiceProduct = ({ productInfoItems }) => {
       justifyContent={'center'}
       alignItems={'center'}
     >
-      <Box
-        // border={'blue 2px solid'}
-        mb={34}
-        maxWidth={846}
-      >
+      <Box mb={34} maxWidth={846}>
         <TitleAndText
           variant={'title2'}
           p={{ _: '0px 40px ', tablet: '0px 60px' }}

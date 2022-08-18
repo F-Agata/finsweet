@@ -26,11 +26,7 @@ const Navigation = () => {
       {!modificationMenuSize && <StyledFaBars onClick={changeNav} />}
       {modificationMenuSize && <LinksPart menuItems={menuItems} />}
       {!modificationMenuSize && smallNavIsOpen ? (
-        <NavSmall
-          menuItems={menuItems}
-          setSmallNavIsOpen={setSmallNavIsOpen}
-          changeNav={changeNav}
-        />
+        <NavSmall menuItems={menuItems} changeNav={changeNav} />
       ) : null}
     </BoxNavigation>
   )
@@ -39,7 +35,6 @@ const Navigation = () => {
 export default Navigation
 
 const BoxNavigation = styled(Box)`
-  //border: 2px solid red;
   position: fixed;
   top: 0;
   display: flex;
@@ -53,9 +48,6 @@ const BoxNavigation = styled(Box)`
   ${({ theme }) => css`
     background-color: ${theme.colors.colorWhite};
   `};
-  //@media (min-width: 768px) {
-  //  padding:  0 40px;
-  //}
 `
 
 const StyledFaBars = styled(FaBars)`

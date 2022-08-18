@@ -7,7 +7,6 @@ const GetTheBestList = () => {
   const getTheBestItem = getTheBestListItems.map((item) => (
     <Box
       key={item.icon}
-      // border={'pink 2px solid'}
       p={'0px 0px 30px 0'}
       display={'flex'}
       flexDirection={'column'}
@@ -32,7 +31,6 @@ const GetTheBestList = () => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       display={'flex'}
       flexWrap={'wrap'}
       flexDirection={{ _: 'column', tablet: 'row' }}

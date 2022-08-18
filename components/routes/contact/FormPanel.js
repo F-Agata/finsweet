@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 import useForm from './useForm'
@@ -17,7 +16,6 @@ function FormPanel({ submittedForm }) {
   return (
     <WrappPanel onSubmit={handleSubmit} noValidate>
       <Box
-        // border={'purple 2px solid'}
         display={'flex'}
         flexDirection={{ _: 'column', tablet: 'row' }}
         justifyContent={{ _: 'center', tablet: 'space-between' }}
@@ -65,10 +63,7 @@ function FormPanel({ submittedForm }) {
           )}
         </Box>
       </Box>
-      <Box
-        // border={'purple 2px solid'}
-        mb={10}
-      >
+      <Box mb={10}>
         <InputF
           type={'email'}
           id={'email'}
@@ -138,7 +133,6 @@ export default FormPanel
 
 const WrappPanel = styled.form`
   width: 100%;
-  //border: chartreuse 2px solid;
   display: flex;
   flex-direction: column;
   align-items: stretch;

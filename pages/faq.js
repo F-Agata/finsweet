@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react'
 import TitleAndText from '../styles/TitleAndText'
 import Box from '../styles/Box'
-import BoxColorFulBg from '../styles/BoxColorFulBg'
 
 import BoxSingleQuestion from '../components/routes/faq/BoxSingleQuestion'
 
@@ -20,7 +18,6 @@ const Faq = () => {
 
   return (
     <Box
-      // border={'green 2px solid'}
       m={'0 auto'}
       width={'100%'}
       p={{ _: '100px 0px 40px 0px', tablet: '150px 0px 40px 0px' }}
@@ -31,7 +28,6 @@ const Faq = () => {
       justifyContent={{ _: 'center', tablet: 'space-between' }}
     >
       <Box
-        // border={'blue 2px solid'}
         width={{ _: '100%', tablet: '38%' }}
         textAlign={{ _: 'center', tablet: 'left' }}
         mb={20}
@@ -47,9 +43,7 @@ const Faq = () => {
         </TitleAndText>
       </Box>
       <Box
-        // border={'yellow 2px solid'}
         width={{ _: '100%', tablet: '60%' }}
-        // textAlign={{_: 'center', tablet: 'left',}}
         p={'0px 40px'}
         textAlign={'center'}
         display={'flex'}

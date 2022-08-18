@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, { css } from 'styled-components'
 
 import Btn from '../styles/Btn'
@@ -15,9 +14,7 @@ const InputFreeTrial = () => {
         type={'email'}
         id={'email'}
         name={'email'}
-        // value={values.email}
-        // onChange={handleChange}
-      ></InputStyledHome>
+      />
       <Btn
         type={'submit'}
         variant={'dark'}
@@ -36,7 +33,6 @@ const InputFreeTrial = () => {
 export default InputFreeTrial
 
 const FormStyledHome = styled.form`
-  //border: crimson 2px solid;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -61,16 +57,7 @@ const InputStyledHome = styled.input`
     border-color: ${(props) => props.theme.colors.colorPrimary};
     background-color: ${(props) => props.theme.colors.colorWhite};
     color: ${(props) => props.theme.colors.colorPrimary};
-  `}
-  ::placeholder {
-  }
-  :focus {
-    //border-color: ${(props) => props.theme.colors.colorWhite};
-  }
-  :active {
-    //border-color: ${(props) => props.theme.colors.colorWhite};
-  }
-
+  `};
   @media (min-width: 568px) {
     padding: 16px 177px 16px 22px;
   }

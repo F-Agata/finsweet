@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Btn from '../../../styles/Btn'
 import Box from '../../../styles/Box'
@@ -8,7 +8,6 @@ import TitleAndText from '../../../styles/TitleAndText'
 const ProductsHeader = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       m={'0 auto'}
       p={{ _: '100px 0px 40px 0px', tabletL: '150px 0px 40px 0px' }}
       textAlign={'center'}
@@ -22,7 +21,6 @@ const ProductsHeader = () => {
       <BoxStyledGradient />
       <Box
         zIndex={'1'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={{ _: 'column', tabletL: 'row' }}
         justifyContent={{ _: 'center', tabletL: 'space-between' }}
@@ -30,7 +28,6 @@ const ProductsHeader = () => {
         p={'40px 40px 40px 40px'}
       >
         <Box
-          // border={'green 2px solid'}
           width={{ _: '100%', tabletL: '47%' }}
           display={'flex'}
           flexDirection={'column'}
@@ -48,7 +45,6 @@ const ProductsHeader = () => {
             erat.
           </TitleAndText>
           <Box
-            // border={'red 2px solid'}
             display={'flex'}
             justifyContent={'flex-start'}
             alignItems={'center'}
@@ -64,10 +60,7 @@ const ProductsHeader = () => {
             </Link>
           </Box>
         </Box>
-        <Box
-          // border={'brown 2px solid'}
-          width={{ _: '100%', tabletL: '47%' }}
-        >
+        <Box width={{ _: '100%', tabletL: '47%' }}>
           <StyledImgHeader src={'/Dashboard image.svg'} alt={'Header'} />
         </Box>
       </Box>

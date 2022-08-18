@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import TitleAndText from '../../../styles/TitleAndText'
 import Box from '../../../styles/Box'
 import BoxColorFulBg from '../../../styles/BoxColorFulBg'
@@ -33,7 +33,6 @@ const TrendingPost = ({ listPostsItems, listLinksToImg }) => {
             cursor={'pointer'}
           >
             <Box
-              // border={'blue 2px solid'}
               width={{ _: '100%', tabletL: '47%' }}
               textAlign={{ _: 'center', tabletL: 'left' }}
             >
@@ -60,7 +59,6 @@ const TrendingPost = ({ listPostsItems, listLinksToImg }) => {
             <Box
               borderRadius={'24px'}
               overflow={'hidden'}
-              // border={'blue 2px solid'}
               width={{
                 _: '80%',
                 tablet: '60%',

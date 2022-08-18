@@ -8,16 +8,12 @@ const WhyShouldYouWorkWithUs = () => {
   const whyItem = whyItems.map((item) => (
     <Box
       key={item}
-      // border={'pink 2px solid'}
       p={'0px 0px 20px 0'}
       display={'flex'}
       justifyContent={'flex-start'}
       textAlign={'left'}
     >
-      <Box
-        // border={'pink 2px solid'}
-        pr={20}
-      >
+      <Box pr={20}>
         <img src={`/aboutUs/iconArrowRight.svg`} alt={'icon'} />
       </Box>
 
@@ -29,7 +25,6 @@ const WhyShouldYouWorkWithUs = () => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       display={'flex'}
       flexDirection={{ _: 'column', tablet: 'row' }}
       justifyContent={{ _: 'center', tablet: 'space-between' }}

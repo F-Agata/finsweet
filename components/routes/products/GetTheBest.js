@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
@@ -7,7 +7,6 @@ import GetTheBestList from './GetTheBestList'
 const GetTheBest = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       m={'0 auto'}
       pt={100}
       textAlign={'center'}
@@ -22,7 +21,6 @@ const GetTheBest = () => {
       <BoxStyledGradient />
       <Box
         zIndex={'1'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}

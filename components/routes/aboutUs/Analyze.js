@@ -8,7 +8,6 @@ const Analyze = () => {
   const analyzeItem = analyzeItems.map((item) => (
     <Box
       key={item.title}
-      // border={'pink 2px solid'}
       p={'0px 0px 20px 0'}
       display={'flex'}
       justifyContent={'flex-start'}
@@ -31,7 +30,6 @@ const Analyze = () => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       display={'flex'}
       flexDirection={{ _: 'column', tablet: 'row' }}
       justifyContent={{ _: 'center', tablet: 'space-between' }}

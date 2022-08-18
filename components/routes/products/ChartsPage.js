@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import OneChart from './OneChart'
@@ -6,7 +6,6 @@ import OneChart from './OneChart'
 const ChartsPage = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       m={'0 auto'}
       pt={60}
       pb={60}
@@ -23,7 +22,6 @@ const ChartsPage = () => {
       <BoxStyledGradient2 />
       <Box
         zIndex={'1'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}

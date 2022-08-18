@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import TitleAndText from '../../../styles/TitleAndText'
 import Box from '../../../styles/Box'
 import Link from '../../../styles/Link'
@@ -9,7 +9,6 @@ const AllPosts = ({ listPostsItems, listLinksToImg }) => {
       <Box
         key={item.Population}
         width={{ _: '100%', tablet: '48%', tabletL: '31%' }}
-        // border={'purple 2px solid'}
         mb={20}
         p={20}
       >
@@ -23,7 +22,6 @@ const AllPosts = ({ listPostsItems, listLinksToImg }) => {
             cursor={'pointer'}
           >
             <Box
-              // border={'orange 2px solid'}
               width={{
                 _: '100%',
                 mobileXM: '70%',
@@ -63,7 +61,6 @@ const AllPosts = ({ listPostsItems, listLinksToImg }) => {
   return (
     <Box
       width={'100%'}
-      // border={'yellow 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -78,9 +75,7 @@ const AllPosts = ({ listPostsItems, listLinksToImg }) => {
 
       <Box
         width={'100%'}
-        // border={'blue 2px solid'}
         borderRadius={24}
-        // p={'40px 40px'}
         display={'flex'}
         flexWrap={'wrap'}
         flexDirection={{ _: 'column', tablet: 'row' }}

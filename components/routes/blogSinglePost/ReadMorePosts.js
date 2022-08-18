@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import TitleAndText from '../../../styles/TitleAndText'
 import Box from '../../../styles/Box'
@@ -19,7 +19,6 @@ const ReadMorePosts = ({ listPostsItems, listLinksToImg }) => {
       <Box
         key={`${item.Population}${item.Year}`}
         width={{ _: '100%', tablet: '48%', tabletL: '31%' }}
-        // border={'purple 2px solid'}
         mb={20}
         p={20}
       >
@@ -33,7 +32,6 @@ const ReadMorePosts = ({ listPostsItems, listLinksToImg }) => {
             cursor={'pointer'}
           >
             <Box
-              // border={'orange 2px solid'}
               width={{
                 _: '100%',
                 mobileXM: '70%',
@@ -71,7 +69,6 @@ const ReadMorePosts = ({ listPostsItems, listLinksToImg }) => {
   return (
     <Box
       width={'100%'}
-      // border={'yellow 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -86,9 +83,7 @@ const ReadMorePosts = ({ listPostsItems, listLinksToImg }) => {
 
       <Box
         width={'100%'}
-        // border={'blue 2px solid'}
         borderRadius={24}
-        // p={'40px 40px'}
         display={'flex'}
         flexWrap={'wrap'}
         flexDirection={{ _: 'column', tablet: 'row' }}

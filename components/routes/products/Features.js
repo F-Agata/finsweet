@@ -13,12 +13,7 @@ const Features = () => {
         key={item.icon}
         addVerticalOrHorizontalBorder={addVerticalOrHorizontalBorder}
       >
-        <Box
-          // border={'blue 2px solid'}
-          width={53}
-          height={47}
-          mb={20}
-        >
+        <Box width={53} height={47} mb={20}>
           <img src={`/products/${item.icon}.svg`} alt={'icon'} />
         </Box>
         <Box alignSelf={'stretch'}>
@@ -31,10 +26,7 @@ const Features = () => {
           </TitleAndText>
         </Box>
 
-        <Box
-          // border={'blue 2px solid'}
-          flexGrow={'2'}
-        >
+        <Box flexGrow={'2'}>
           <TitleAndText
             variant={'textLarge'}
             textAlign={{ _: 'center', tabletL: 'left' }}
@@ -48,7 +40,6 @@ const Features = () => {
 
   return (
     <Box
-      // border={'green 2px solid'}
       m={'0 auto'}
       width={'100%'}
       textAlign={'center'}
@@ -62,7 +53,6 @@ const Features = () => {
         <TitleAndText variant={'title2'}>Features</TitleAndText>
       </Box>
       <Box
-        // bg={'rgba(215, 152, 225, 0.15)'}
         bg={'colorLight50'}
         borderRadius={24}
         p={'40px 40px'}
@@ -80,7 +70,6 @@ const Features = () => {
 export default Features
 
 const StyledBoxOneWorker = styled(Box)`
-  //border: 2px solid red;
   flex-grow: 1;
   margin: 0px 0;
   padding: 40px 40px;
@@ -88,7 +77,6 @@ const StyledBoxOneWorker = styled(Box)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   border-bottom: 2px solid;
   border-top: 2px solid;
   ${({ addVerticalOrHorizontalBorder, theme }) => css`

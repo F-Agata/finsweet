@@ -14,7 +14,6 @@ const ChoiceMonthlyYearly = ({ setIsChoiceMonthly, setIsChoiceYearly }) => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       bg={'colorLight'}
       p={3}
       display={'flex'}

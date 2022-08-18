@@ -1,5 +1,4 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import footerItems from './footerItems'
 
@@ -18,7 +17,6 @@ const Footer = () => {
 
   return (
     <Box
-      // border={'blue 2px solid'}
       maxWidth={1440}
       width={'100%'}
       justifySelf={'flex-end'}
@@ -48,7 +46,6 @@ const Footer = () => {
           display={'flex'}
           justifyContent={'space-between'}
           flexDirection={{ _: 'column', tabletL: 'row' }}
-          // border={'yellow 2px solid'}
         >
           {!modificationOrderFooter && (
             <Box alignSelf={'center'} mb={20}>
@@ -61,7 +58,6 @@ const Footer = () => {
           <OneColumn footerItems={footerItems} />
 
           <Box
-            // border={'pink 2px solid'}
             display={'flex'}
             flexDirection={'column'}
             alignItems={{ _: 'center', tabletL: 'flex-start' }}
@@ -73,7 +69,6 @@ const Footer = () => {
               </Link>
             )}
             <Box
-              // border={'purple 2px solid'}
               display={'flex'}
               flexDirection={'column'}
               alignItems={{ _: 'center', tabletL: 'flex-start' }}
@@ -99,7 +94,6 @@ const Footer = () => {
 export default Footer
 
 const BoxStyledGradient = styled(Box)`
-  //border: 2px solid grey;
   position: absolute;
   top: 20px;
   left: 50%;

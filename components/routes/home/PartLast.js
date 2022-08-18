@@ -6,7 +6,6 @@ import TitleAndText from '../../../styles/TitleAndText'
 const PartLast = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       maxWidth={846}
       textAlign={'center'}
       m={'0 auto'}

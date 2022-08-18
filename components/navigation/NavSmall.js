@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { GrClose } from 'react-icons/gr'
@@ -10,7 +10,7 @@ import Btn from '../../styles/Btn'
 import Link from '../../styles/Link'
 import TitleAndText from '../../styles/TitleAndText'
 
-const NavSmall = ({ menuItems, setSmallNavIsOpen, changeNav }) => {
+const NavSmall = ({ menuItems, changeNav }) => {
   const menuItem = menuItems.map((item) => (
     <StyledNavigationLi key={item.id}>
       <Link href={`/${item.id}`} onClick={changeNav}>
@@ -88,22 +88,16 @@ const StyledGrClose = styled(GrClose)`
 `
 
 const StyledNavigationUl = styled.ul`
-  //border: green 2px solid;
   padding-bottom: 40px;
-  //text-decoration: none;
 `
 
 const StyledNavigationLi = styled.li`
-    //border: lightcoral 2px solid;
     padding: 20px 0;
-   //text-decoration: none;
   list-style: none;
   cursor: pointer;
   transition: 0.3s;
    :hover p {
-    //display: inline;
     ${({ theme }) => css`
-      //color: ${theme.colors.colorSecondary};
       font-weight: ${theme.fontWeights.fontBold};
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     `};

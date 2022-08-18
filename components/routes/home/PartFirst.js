@@ -1,5 +1,4 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 import InputFreeTrial from '../../InputFreeTrial'
@@ -7,7 +6,6 @@ import InputFreeTrial from '../../InputFreeTrial'
 const PartFirst = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       m={'0 auto'}
       p={{ _: '100px 0px 40px 0px', tablet: '150px 0px 40px 0px' }}
       textAlign={'center'}
@@ -21,7 +19,6 @@ const PartFirst = () => {
       <BoxStyledGradient />
       <Box
         zIndex={'1'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}

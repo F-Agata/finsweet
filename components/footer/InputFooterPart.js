@@ -1,8 +1,6 @@
-import React from 'react'
 import styled, { css } from 'styled-components'
 
 import Btn from '../../styles/Btn'
-import Box from '../../styles/Box'
 
 const InputFooterPart = () => {
   const handleSubmit = (e) => {
@@ -16,9 +14,7 @@ const InputFooterPart = () => {
         type={'email'}
         id={'email'}
         name={'email'}
-        // value={values.email}
-        // onChange={handleChange}
-      ></InputStyledFooter>
+      />
       <Btn
         type={'submit'}
         variant={'light'}
@@ -37,7 +33,6 @@ const InputFooterPart = () => {
 export default InputFooterPart
 
 const FormStyledFooter = styled.form`
-  //border: crimson 2px solid;
   flex-grow: 1;
   width: 360px;
   display: flex;
@@ -47,7 +42,7 @@ const FormStyledFooter = styled.form`
   margin-top: 20px;
   @media (min-width: 768px) {
     width: 450px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 `
 
@@ -66,12 +61,4 @@ const InputStyledFooter = styled.input`
     background-color: ${(props) => props.theme.colors.colorBtnHover};
     color: ${(props) => props.theme.colors.colorWhite};
   `}
-  ::placeholder {
-  }
-  :focus {
-    //border-color: ${(props) => props.theme.colors.colorWhite};
-  }
-  :active {
-    //border-color: ${(props) => props.theme.colors.colorWhite};
-  }
 `

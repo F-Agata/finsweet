@@ -60,7 +60,6 @@ const BackgraundButtonArrow = styled.div`
   border-radius: 50%;
   background-color: ${(props) => props.theme.gradients.gradientBox};
   opacity: 50%;
-  //border: red 2px solid;
   position: absolute;
   top: 50%;
   left: 50%;

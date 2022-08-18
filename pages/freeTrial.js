@@ -7,7 +7,6 @@ import InputFreeTrial from '../components/InputFreeTrial'
 const FreeTrial = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       width={'100%'}
       m={'0 auto'}
       pt={60}
@@ -25,7 +24,6 @@ const FreeTrial = () => {
       <Box
         zIndex={'1'}
         width={'100%'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
@@ -44,46 +42,26 @@ const FreeTrial = () => {
         </Box>
         <Box
           width={'100%'}
-          // border={'blue 2px solid'}
           borderRadius={24}
-          // p={'40px 40px'}
           display={'flex'}
           flexWrap={'wrap'}
           flexDirection={{ _: 'column', tabletL: 'row' }}
           justifyContent={{ _: 'center', tabletL: 'space-around' }}
           alignItems={'center'}
         >
-          <Box
-            // border={'purple 2px solid'}
-            width={'325px'}
-            height={'288px'}
-            mb={20}
-            borderRadius={24}
-          >
+          <Box width={'325px'} height={'288px'} mb={20} borderRadius={24}>
             <StyledTrialImg
               src={`/freeTrial/man-working-from-home-5198252.png`}
               alt={'photo'}
             />
           </Box>
-          <Box
-            // border={'purple 2px solid'}
-            width={'325px'}
-            height={'288px'}
-            mb={20}
-            borderRadius={24}
-          >
+          <Box width={'325px'} height={'288px'} mb={20} borderRadius={24}>
             <StyledTrialImg
               src={`/freeTrial/people-working-in-front-of-the-computer-3184357.png`}
               alt={'photo'}
             />
           </Box>
-          <Box
-            // border={'purple 2px solid'}
-            width={'325px'}
-            height={'288px'}
-            mb={20}
-            borderRadius={24}
-          >
+          <Box width={'325px'} height={'288px'} mb={20} borderRadius={24}>
             <StyledTrialImg
               src={`/freeTrial/person-using-macbook-pro-3861964.png`}
               alt={'photo'}

@@ -19,7 +19,6 @@ const LinksPart = ({ menuItems }) => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       flexGrow={'1'}
       display={'flex'}
       justifyContent={'flex-end'}
@@ -42,7 +41,6 @@ const LinksPart = ({ menuItems }) => {
 export default LinksPart
 
 const StyledNavigationUl = styled.ul`
-  //border: olivedrab 2px solid;
   display: flex;
   justify-content: flex-end;
   @media (min-width: 1024px) {
@@ -51,7 +49,6 @@ const StyledNavigationUl = styled.ul`
 `
 
 const StyledNavigationLi = styled.li`
-  //border: blueviolet 2px solid;
   list-style: none;
   margin-left: 10px;
   padding: 0 10px;

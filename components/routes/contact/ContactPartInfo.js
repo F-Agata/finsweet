@@ -8,7 +8,6 @@ const ContactPartInfo = () => {
   const partInfoItem = partInfoItems.map((item) => (
     <Box
       key={item.icon}
-      // border={'pink 2px solid'}
       p={{
         _: '10px 0 ',
         tablet: '0px 20px 20px 0px',
@@ -48,7 +47,6 @@ const ContactPartInfo = () => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       width={{ _: '100%', tabletL: '33%' }}
       mt={{ _: '20px', tablet: '60px', tabletL: '0px' }}
       display={'flex'}

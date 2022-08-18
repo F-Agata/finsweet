@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
@@ -19,10 +19,7 @@ const Form = () => {
 
   return (
     <>
-      <Box
-        // border={'orange 2px solid'}
-        width={'100%'}
-      >
+      <Box width={'100%'}>
         <FormPanel submittedForm={submittedForm} />
         {isSubmited && (
           <TitleAndText

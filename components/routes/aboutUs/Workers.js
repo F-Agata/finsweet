@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import TitleAndText from '../../../styles/TitleAndText'
 import Box from '../../../styles/Box'
 
@@ -13,7 +13,6 @@ const Workers = () => {
         </TitleAndText>
       </Box>
       <Box
-        // border={'blue 2px solid'}
         overflow={'hidden'}
         width={56}
         height={56}
@@ -29,7 +28,6 @@ const Workers = () => {
 
   return (
     <Box
-      // border={'green 2px solid'}
       m={'0 auto'}
       width={'100%'}
       p={{ _: '10px 0px 40px 0px', tablet: '15px 0px 40px 0px' }}
@@ -45,7 +43,6 @@ const Workers = () => {
         </TitleAndText>
       </Box>
       <Box
-        // border={'blue 2px solid'}
         p={'0px 40px'}
         textAlign={'center'}
         display={'flex'}
@@ -65,7 +62,6 @@ export default Workers
 const StyledBoxOneWorker = styled(Box)`
   border: 2px solid;
   border-color: ${(props) => props.theme.colors.colorLight};
-  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
   margin: 20px 0;
   padding: 60px 40px;

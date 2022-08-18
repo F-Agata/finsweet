@@ -1,10 +1,7 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import TitleAndText from '../styles/TitleAndText'
 import Box from '../styles/Box'
-import Link from '../styles/Link'
-import Btn from '../styles/Btn'
 
 import ContactPartForm from '../components/routes/contact/ContactPartForm'
 import ContactPartInfo from '../components/routes/contact/ContactPartInfo'
@@ -12,7 +9,6 @@ import ContactPartInfo from '../components/routes/contact/ContactPartInfo'
 const Contact = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       width={'100%'}
       m={'0 auto'}
       p={{ _: '100px 0px 40px 0px', tabletL: '150px 0px 40px 0px' }}
@@ -27,7 +23,6 @@ const Contact = () => {
       <BoxStyledGradient />
       <Box
         zIndex={'1'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         width={'100%'}
         flexDirection={'column'}

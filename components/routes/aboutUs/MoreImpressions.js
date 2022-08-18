@@ -26,7 +26,6 @@ const MoreImpressions = () => {
         zIndex={2}
       >
         <Box
-          // border={'green 2px solid'}
           width={{ _: '100%', tablet: '47%' }}
           m={{ _: '0px 0px 40px 0px', tablet: '0px 0px 0px 0px' }}
           display={'flex'}
@@ -48,10 +47,7 @@ const MoreImpressions = () => {
             </Btn>
           </Link>
         </Box>
-        <Box
-          // border={'green 2px solid'}
-          width={{ _: '100%', tablet: '47%' }}
-        >
+        <Box width={{ _: '100%', tablet: '47%' }}>
           <StyledImgMoreImpressions
             src={`/aboutUs/imageMoreImpressions.png`}
             alt={'more impressions image'}

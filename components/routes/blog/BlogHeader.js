@@ -1,14 +1,13 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+
 import TitleAndText from '../../../styles/TitleAndText'
 import Box from '../../../styles/Box'
-import Link from '../../../styles/Link'
-import Btn from '../../../styles/Btn'
+
 import TrendingPost from './TrendingPost'
 
 const BlogHeader = ({ listPostsItems, listLinksToImg }) => {
   return (
     <Box
-      // border={'orange 2px solid'}
       m={'0 auto'}
       p={{ _: '100px 0px 40px 0px', tablet: '150px 0px 40px 0px' }}
       textAlign={'center'}
@@ -23,7 +22,6 @@ const BlogHeader = ({ listPostsItems, listLinksToImg }) => {
       <BoxStyledGradient2 />
       <Box
         zIndex={'1'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}

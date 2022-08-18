@@ -1,5 +1,4 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../styles/Box'
 import TitleAndText from '../../styles/TitleAndText'
@@ -9,7 +8,6 @@ const IconsFooterPart = () => {
   return (
     <Box
       mt={15}
-      // border={'orange 2px solid'}
       display={'flex'}
       justifyContent={'space-between'}
       alignItems={{ _: 'center', tabletL: 'center' }}
@@ -28,7 +26,6 @@ const IconsFooterPart = () => {
         p={{ _: '4px 0px ', tabletL: '0' }}
         display={'flex'}
         justifyContent={'space-between'}
-        // border={'red 2px solid'}
       >
         <TitleAndText
           fontSize={'12px'}

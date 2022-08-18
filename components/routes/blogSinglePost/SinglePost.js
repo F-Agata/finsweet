@@ -7,7 +7,6 @@ import Link from '../../../styles/Link'
 const SinglePost = ({ chosenPost, listLinksToImg }) => {
   return (
     <Box
-      // border={'orange 2px solid'}
       m={'0 auto'}
       p={{ _: '100px 0px 40px 0px', tablet: '150px 0px 40px 0px' }}
       textAlign={'center'}
@@ -23,7 +22,6 @@ const SinglePost = ({ chosenPost, listLinksToImg }) => {
       <Box
         zIndex={'1'}
         width={'100%'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
@@ -31,7 +29,6 @@ const SinglePost = ({ chosenPost, listLinksToImg }) => {
         p={'40px 40px 20px 40px'}
       >
         <Box
-          // border={'orange 2px solid'}
           maxWidth={846}
           p={{ _: '0px 40px ', tablet: '0px 60px' }}
           display={'flex'}
@@ -50,7 +47,6 @@ const SinglePost = ({ chosenPost, listLinksToImg }) => {
         <Box
           width={'100%'}
           maxHeight={512}
-          // border={'orange 2px solid'}
           mb={20}
           borderRadius={24}
           overflow={'hidden'}

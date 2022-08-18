@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import TitleAndText from '../../../styles/TitleAndText'
 import Box from '../../../styles/Box'
@@ -34,7 +33,6 @@ const OneOptionOnePrice = ({
               key={`${item.title}.${oneLine.infoName}`}
               display={'flex'}
               pt={20}
-              // border={'purple 2px solid'}
               justifyContent={'left'}
             >
               <Box pr={20}>
@@ -76,7 +74,6 @@ const OneOptionOnePrice = ({
 
   return (
     <Box
-      // border={'orange 2px solid'}
       m={'0 auto'}
       width={'100%'}
       p={{ _: '10px 0px 40px 0px', tablet: '15px 0px 40px 0px' }}

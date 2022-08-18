@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import TitleAndText from '../../../styles/TitleAndText'
 import Box from '../../../styles/Box'
@@ -19,7 +19,6 @@ const OneCharts = () => {
     return (
       <Box
         key={item.img}
-        // border={'pink 2px solid'}
         p={'40px 40px 40px 40px'}
         display={'flex'}
         flexDirection={{ _: 'column', tabletL: 'row' }}
@@ -27,10 +26,8 @@ const OneCharts = () => {
         alignItems={{ _: 'center', tabletL: 'center' }}
       >
         <Box
-          // border={'blue 2px solid'}
           width={{ _: '100%', tabletL: '47%' }}
           order={{ _: '0', tabletL: `${changeOrder}` }}
-          // order={`${changeOrder}`}
         >
           <BoxColorFulBg mb={20}>
             <TitleAndText variant={'textColorful'} colorFulBg>
@@ -53,10 +50,7 @@ const OneCharts = () => {
           </TitleAndText>
         </Box>
 
-        <Box
-          // border={'blue 2px solid'}
-          width={{ _: '100%', tablet: '70%', tabletL: '47%' }}
-        >
+        <Box width={{ _: '100%', tablet: '70%', tabletL: '47%' }}>
           <StyledChartImg src={`/products/${item.img}.png`} alt={'chart'} />
         </Box>
       </Box>

@@ -1,7 +1,9 @@
-import Box from '../../../styles/Box'
-import TitleAndText from '../../../styles/TitleAndText'
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
+
+import Box from '../../../styles/Box'
+import TitleAndText from '../../../styles/TitleAndText'
+
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 
 const BoxSingleQuestion = ({ question, smallDescription, opened = false }) => {
@@ -11,12 +13,10 @@ const BoxSingleQuestion = ({ question, smallDescription, opened = false }) => {
     <StyledBoxSingleQuestion>
       <Box
         width={'100%'}
-        // border={'green 2px solid'}
         display={'flex'}
         justifyContent={'space-between'}
         alignItems={'center'}
         mb={20}
-        // p={'20px  0 0 20px'}
       >
         <TitleAndText variant={'title4'} textAlign={'left'}>
           {question}

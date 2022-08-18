@@ -6,12 +6,7 @@ import listCompanyLogosName from './listCompanyLogosName'
 
 const CompanyLogos = () => {
   const companyLogo = listCompanyLogosName.map((item) => (
-    <Box
-      key={item}
-      height={40}
-      // border={'blue 2px solid'}
-      m={20}
-    >
+    <Box key={item} height={40} m={20}>
       <Link href={`/#`}>
         <StyledCompanyIcon src={`/aboutUs/${item}.png`} alt={'logo'} />
       </Link>
@@ -20,7 +15,6 @@ const CompanyLogos = () => {
 
   return (
     <Box
-      // border={'green 2px solid'}
       p={'40px 0'}
       m={'40px 0px'}
       width={'100%'}
