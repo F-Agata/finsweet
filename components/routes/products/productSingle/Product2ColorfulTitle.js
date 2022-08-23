@@ -14,7 +14,6 @@ const Product2ColorfulTitle = () => {
       p={'60px 40px'}
     >
       <Box
-        // border={'green 2px solid'}
         width={{ _: '100%', tablet: '47%' }}
         m={{ _: '0px 0px 40px 0px', tablet: '0px 0px 0px 0px' }}
         display={'flex'}
@@ -38,7 +37,6 @@ const Product2ColorfulTitle = () => {
         </TitleAndText>
       </Box>
       <Box
-        // border={'green 2px solid'}
         width={{ _: '100%', tablet: '47%' }}
         m={{ _: '0px 0px 40px 0px', tablet: '0px 0px 0px 0px' }}
         display={'flex'}

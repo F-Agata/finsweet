@@ -1,34 +1,19 @@
 import { useRouter } from 'next/router'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import TitleAndText from '../../../../styles/TitleAndText'
 import Box from '../../../../styles/Box'
 import Btn from '../../../../styles/Btn'
 import Link from '../../../../styles/Link'
 
-import productInfoItems from './productInfoItems'
-
 const ProductInfo = ({ chosenProduct }) => {
   const router = useRouter()
 
   const productInfoItem = chosenProduct.moreInfo.map((oneInfo) => (
-    <StyledBoxOneWorker
-      key={oneInfo.icon}
-      // border={'blue 2px solid'}
-    >
-      <Box
-        // border={'blue 2px solid'}
-        width={48}
-        height={48}
-        mb={20}
-      >
+    <StyledBoxOneWorker key={oneInfo.icon}>
+      <Box width={48} height={48} mb={20}>
         <img src={`/productSingle/${oneInfo.icon}.svg`} alt={'icon'} />
       </Box>
-      <Box
-        // border={'blue 2px solid'}
-        // flexGrow={'1'}
-        // width={"100%"}
-        alignSelf={'stretch'}
-      >
+      <Box alignSelf={'stretch'}>
         <TitleAndText
           variant={'title3'}
           textAlign={{ _: 'center', tabletL: 'left' }}
@@ -50,7 +35,6 @@ const ProductInfo = ({ chosenProduct }) => {
 
   return (
     <Box
-      // border={'green 2px solid'}
       m={'0 auto'}
       width={'100%'}
       textAlign={'center'}
@@ -100,11 +84,9 @@ const ProductInfo = ({ chosenProduct }) => {
         alignItems={'center'}
         mt={20}
       >
-        {/*<Link href={`/products`}> */}
         <Btn variant={'dark'} onClick={() => router.back()}>
           Wróć do poprzedniej strony
         </Btn>
-        {/*</Link>*/}
       </Box>
     </Box>
   )
@@ -113,7 +95,6 @@ const ProductInfo = ({ chosenProduct }) => {
 export default ProductInfo
 
 const StyledBoxOneWorker = styled(Box)`
-  //border: 2px solid red;
   flex-grow: 1;
   margin: 0px 0;
   padding: 40px 40px;

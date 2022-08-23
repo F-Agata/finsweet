@@ -7,7 +7,6 @@ import styled from 'styled-components'
 const ProductHeader = () => {
   return (
     <Box
-      // border={'orange 2px solid'}
       width={'100%'}
       m={'0 auto'}
       pt={60}
@@ -25,7 +24,6 @@ const ProductHeader = () => {
       <Box
         zIndex={'1'}
         width={'100%'}
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
@@ -42,10 +40,7 @@ const ProductHeader = () => {
             erat, sed diam voluptua.
           </TitleAndText>
         </Box>
-        <Box
-          // border={'purple 2px solid'}
-          mb={60}
-        >
+        <Box mb={60}>
           <StyledImg src={`/Dashboard image.svg`} alt={'icon'} />
         </Box>
         <Box mb={20} maxWidth={846}>
